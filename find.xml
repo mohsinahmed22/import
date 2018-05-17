@@ -1,0 +1,7 @@
+<application>
+  <component name="FindSettings">
+    <option name="customScope" value="Directory '[mag] - ...\vendor\magento\module-checkout'" />
+    <option name="defaultScopeName" value="Directory '[mag] - ...\vendor\magento\module-checkout'" />
+    <option name="SEARCH_SCOPE" value="Directory '[mag] - ...\vendor\magento\module-checkout'" />
+  </component>
+</application>
