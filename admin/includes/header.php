@@ -35,7 +35,7 @@ ob_start();
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Name</span></a>
+                    <a href="index.php" class="site_title"><span>ImportHub.pk</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -60,6 +60,8 @@ ob_start();
                         <h3>General</h3>
                         <ul class="nav side-menu">
                             <li><a href="/admin/"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a></li>
+                            <li><a href="order.php"><i class="fa fa-home"></i> Order <span class="fa fa-chevron-down"></span></a></li>
+                            <li><a href="customers.php"><i class="fa fa-home"></i> Customers <span class="fa fa-chevron-down"></span></a></li>
                             <li><a href="brands.php"><i class="fa fa-users"></i> Brands <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="brands.php">All Brands</a></li>
@@ -90,7 +92,7 @@ ob_start();
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="assets/images/img.jpg" alt="">John Doe
+                                <img src="assets/images/img.jpg" alt="">Mohsin Ahmed
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">

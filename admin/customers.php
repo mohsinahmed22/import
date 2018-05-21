@@ -8,10 +8,10 @@
 
 
 require_once ('core/init.php');
-$template = new Templates("templates/allrequests.php");
+$template = new Templates("templates/allcustomers.php");
 
-$requests =  new Request();
+$customers =  new Customer();
 
-$template->requests = $requests->getAllRequest();
+$template->customers = $customers->getAllCustomers();
 
 echo $template;

@@ -24,6 +24,13 @@ class Brands
         $result = $this->db->resultset();
         return $result;
     }
+    public function getBrand($id){
+        $this->db->query("SELECT * FROM brands where id = :id");
+        $this->db->bind(':id', $id);
+
+        $result = $this->db->single();
+        return $result;
+    }
 
     public function register($data){
         $this->db->query("
@@ -57,10 +64,12 @@ class Brands
             && ($_FILES["brandlogo"]["size"] < 100000)
             && in_array($extension, $allowedExts)) {
             if ($_FILES["brandlogo"]["error"] > 0) {
-                redirect('brands.php', $_FILES["brandlogo"]["error"], 'error');
+                header("Location: brands.php");
+//                redirect('brands.php', $_FILES["brandlogo"]["error"], 'error');
             } else {
                 if (file_exists("images/brandlogo/" . $_FILES["brandlogo"]["name"])) {
-                    redirect('brands.php', 'File already exists', 'error');
+//                    redirect('brands.php', 'File already exists', 'error');
+                    header("Location: brands.php");
                 } else {
                     move_uploaded_file($_FILES["brandlogo"]["tmp_name"],
                         "images/brandlogo/" . $_FILES["brandlogo"]["name"]);
@@ -69,7 +78,7 @@ class Brands
                 }
             }
         } else {
-            redirect('register.php', 'Invalid File Type!', 'error');
+//            redirect('register.php', 'Invalid File Type!', 'error');
         }
     }
 

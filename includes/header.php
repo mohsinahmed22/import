@@ -30,7 +30,7 @@ include 'admin/core/init.php';
     <link href="assets/css/custom.css" rel="stylesheet">
 </head>
 
-<body class="nav-md">
+<body class="login">
 <div class="container body">
     <div class="main_container">
 
