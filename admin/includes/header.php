@@ -17,7 +17,7 @@ ob_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Admin</title>
+    <title>Admin <?php echo STORE_NAME; ?></title>
 
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@ ob_start();
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.php" class="site_title"><span>ImportHub.pk</span></a>
+                    <a href="index.php" class="site_title"><span><?php echo STORE_NAME; ?></span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -59,18 +59,13 @@ ob_start();
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a href="/admin/"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a></li>
-                            <li><a href="order.php"><i class="fa fa-home"></i> Order <span class="fa fa-chevron-down"></span></a></li>
-                            <li><a href="customers.php"><i class="fa fa-home"></i> Customers <span class="fa fa-chevron-down"></span></a></li>
-                            <li><a href="brands.php"><i class="fa fa-users"></i> Brands <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="brands.php">All Brands</a></li>
-                                    <li><a href="add-brand.php">Add New Brand</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="users.php"><i class="fa fa-home"></i> Users <span class="fa fa-chevron-down"></span></a></li>
-                            <li><a href="shipping.php"><i class="fa fa-home"></i> Shipping <span class="fa fa-chevron-down"></span></a></li>
-                            <li><a href="settings.php"><i class="fa fa-home"></i> Settings <span class="fa fa-chevron-down"></span></a></li>
+                            <li><a href="index.php"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-right"></span></a></li>
+                            <li><a href="order.php"><i class="fa fa-home"></i> Order <span class="fa fa-chevron-right"></span></a></li>
+                            <li><a href="customers.php"><i class="fa fa-home"></i> Customers <span class="fa fa-chevron-right"></span></a></li>
+                            <li><a href="brands.php"><i class="fa fa-users"></i> Brands <span class="fa fa-chevron-right"></span></a></li>
+                            <li><a href="users.php"><i class="fa fa-home"></i> Users <span class="fa fa-chevron-right"></span></a></li>
+                            <li><a href="shipping.php"><i class="fa fa-home"></i> Shipping <span class="fa fa-chevron-right"></span></a></li>
+                            <li><a href="setting.php"><i class="fa fa-home"></i> Settings <span class="fa fa-chevron-right"></span></a></li>
 
                         </ul>
                     </div>
@@ -98,7 +93,7 @@ ob_start();
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
                                 <li><a href="profile.php"> Profile</a></li>
                                 <li>
-                                    <a href="settings.php">
+                                    <a href="setting.php">
                                         <span class="badge bg-red pull-right">50%</span>
                                         <span>Settings</span>
                                     </a>
@@ -106,7 +101,7 @@ ob_start();
                                 <li><a href="logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                             </ul>
                         </li>
-sss                    </ul>
+                    </ul>
                 </nav>
             </div>
         </div>
