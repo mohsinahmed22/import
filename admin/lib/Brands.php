@@ -16,7 +16,9 @@ class Brands
         $this->db = new Database();
     }
 
-
+    /*
+    * Select All Brand
+    */
     public function getAllBrands(){
         $query = "SELECT * FROM brands ";
         $this->db->query($query);
@@ -24,6 +26,11 @@ class Brands
         $result = $this->db->resultset();
         return $result;
     }
+
+
+    /*
+    * Select Single Brand
+    */
     public function getBrand($id){
         $this->db->query("SELECT * FROM brands where id = :id");
         $this->db->bind(':id', $id);
@@ -32,14 +39,21 @@ class Brands
         return $result;
     }
 
+    /*
+    * Add New Brand to Database
+    */
     public function register($data){
         $this->db->query("
-                    INSERT INTO brands (brandname, img, url)
-                    values (:brandname, :img, :url)
+                    INSERT INTO brands (brandname, img, url, standard_charges, pcs_limit, vat_charges, region_name)
+                    values (:brandname, :img, :url, :standard_charges, :pcs_limit, :vat_charges, :region_name)
         ");
         $this->db->bind(":brandname", $data['brandname']);
         $this->db->bind(":img", $data['img']);
         $this->db->bind(":url", $data['url']);
+        $this->db->bind(":standard_charges", $data['standard_charges']);
+        $this->db->bind(":pcs_limit", $data['pcs_limit']);
+        $this->db->bind(":vat_charges", $data['vat_charges']);
+        $this->db->bind(":region_name", $data['region_name']);
 
         if($this->db->execute()){
             return true;
@@ -48,7 +62,7 @@ class Brands
         }
     }
 
-    /*
+        /*
          * Upload User brandlogo
          */
     public function uploadlogo(){
@@ -83,5 +97,43 @@ class Brands
     }
 
 
+
+    /*
+    * Select Brand via Region
+    */
+
+    public function SelectBrandsRegion($region_code){
+        $this->db->query("SELECT brandname, url FROM brands where region_name = :region_name");
+        $this->db->bind(':region_name', $region_code);
+
+        if($result = $this->db->resultset()){
+            return $result;
+        }else{
+            return false;
+        }
+
+
+    }
+
+    public function displayBrandbyregions($regions){
+        $brands_by_region = array();
+        print_r($regions);
+        //return $brands_by_region;
+    }
+
+    /*
+    * Delete Brand
+    */
+
+    public function deleteBrand($id){
+        $this->db->query("DELETE FROM brands WHERE id = :id ");
+        $this->db->bind(":id", $id);
+
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }

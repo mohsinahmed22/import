@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Curry - Currency Conversion Drop down menu jQuery plugin</title>
+
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/2.1.1/amelia/bootstrap.min.css" rel="stylesheet">
+    <link href="prism.css" rel="stylesheet">
+    <style type="text/css">
+        select { margin-top: 7px; }
+
+        .logo {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo:after {
+            top: 100%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .logo:after {
+            border-color: rgba(213, 166, 38, 0);
+            border-top-color: #d5a626;
+            border-width: 30px;
+            left: 50%;
+            margin-left: -30px;
+        }
+
+        .hero-unit > h1 { font-size: 57px; }
+
+        #conversation { background-color: rgba(0, 255, 142, 0.52); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="hero-unit">
+              <h1>Curry - Currency Conversion DDM<span class="logo"></span></h1>
+              <br>
+              <p>Curry is a self contained, (almost) self generated currency converter for many different currencies.</p>
+              <small>v0.8.3</small>
+              <div class="row">
+                <div class="span8">
+                    <a id="download-min" class="btn btn-warning" href="https://bitbucket.org/netyou/curry-currency-ddm/downloads/curry-0.8.3.min.js">
+                      <i class="icon-download-alt"></i>Download minified 1.92kb (1.05kb gz)
+                    </a>
+                    <a id="download-tar" class="btn btn-danger" href="https://bitbucket.org/netyou/curry-currency-ddm/get/master.tar.gz">
+                      <i class="icon-download-alt"></i>Download source
+                    </a>
+                </div>
+                <div class="span2 pull-right">
+                    <a class="btn" href="https://bitbucket.org/netyou/curry-currency-ddm">
+                      Go to repository
+                    </a>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Project Update</h2>
+            <div class="span12">
+                <div class="alert alert-success">
+                  <strong>29th of August 2017</strong>
+                  <br>
+                    Curry has been updated to v0.8.3:
+					<ul>
+            <li>The yql api has become very unstable over the last few days and as a result Curry has now been rebased and is using the <a href="https://fixer.io">fixer.io api</a>.</li>
+            <li>Tested with the latest jQuery version v3.2.1.</li>
+          </ul>
+                    <hr>
+                    Curry uses fixer.io to fetch raw currencies and currently only supports INR, EUR, CAD, GBP, ILS.
+                    <br>
+                    Version 1.0.0 is coming soon will include all currencies fixer.io supports and much more.
+                    <br>
+                    In the mean time a suggested alternative is a <a href="#custom-currency-values">custom list</a> or to use <a href="http://openexchangerates.org/">openexchangerates.org</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Basic setup</h2>
+            <div class="span4">
+                <pre><code class="language-markup">&lt;div id="my-element"&gt;&lt;/div&gt;
+&lt;span class="price"&gt;$100&lt;/span&gt;
+</code></pre>
+            </div>
+            <div class="span5">
+    <pre><code class="language-javascript">$(function(){ // document ready alias
+    $('#my-element').curry(); // init curry
+});</code></pre>
+            </div>
+            <div class="span3">
+
+                <div class="curry-2a"></div>
+                <div>Price: <span class="price">$100</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Options</h2>
+            <div class="span2">
+                <span class="label">@string</span><span class="label label-important">target</span>
+            </div>
+            <div class="span10">
+                <p>Default is set up as <code>.price</code></p>
+                <p>Sets which element you want the currency conversion to take place on.</p>
+            </div>
+            <div class="span2">
+                <span class="label">@boolean</span><span class="label label-important">change</span>
+            </div>
+            <div class="span10">
+                <p>If you want Curry to handle the currency change, set this to true.</p>
+            </div>
+            <div class="span2">
+                <span class="label">@string</span><span class="label label-important">base</span>
+            </div>
+            <div class="span10">
+                <p>Curry uses USD (US Dollars) as the base for it's conversion.<br>Change this option if you want the base to be calculated according to another currency (must be in the currency list).</p>
+            </div>
+            <div class="span2">
+                <span class="label">@object</span><span class="label label-important">symbols</span>
+            </div>
+            <div class="span10">
+                <p>
+                    You can add your own symbols to this list or overwrite the existing ones.
+                    <br>
+                    Curry will match up the currency key (GBP = &pound;) with your symbol.</p>
+            </div>
+            <div class="span2">
+                <span class="label">@object</span><span class="label label-important">customCurrency</span>
+            </div>
+            <div class="span10">
+                <p>
+                    By default Curry uses the currency conversion figures found at <a href="http://fixer.io/">Fixer.io</a>.
+                    <br>
+                    You can supply your own currency rates via an object where the key is the currency name and the value a number to use for the conversion.
+                    <br>
+                    Curry can also be used interchangeably with <a href="http://openexchangerates.org/">openexchangerates.org</a>.
+                </p>
+            </div>
+            <div class="span3">
+                <pre><code class="language-javascript">var options = {
+    target: '.price',
+    change: false,
+    base:   'USD',
+    symbols: {
+        'ILS' : '&#8362;'
+    },
+    customCurrency: {
+        'USD': 1,
+        'GBP': 0.67,
+        'EUR': 0.42,
+        ...
+    }</code></pre>
+            </div>
+            <div class="span6">
+    <pre><code class="language-javascript">$(function(){ // document ready alias
+    $('#my-element').curry( options ); // init custom options
+});</code></pre>
+            </div>
+            <div class="span3">
+                <div class="curry-2b"></div>
+                <div>Price: <span class="price">$100</span></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Disclaimer</h2>
+            <div class="span12">
+                <div class="alert">
+                    <p>
+                      Curry uses an external service and that service is not 100% reliable.
+                      <br>
+                      Please read more about it at <a href="https://fixer.io" target="_blank">Fixer.io</a> if you have a high traffic site or need your data to be available with guaranteed up time.
+                    </p>
+                    <p>
+                      You are reponsible for notifying anybody who uses Curry that any calculations or conversion are for informational purposes only.
+                      <br>
+                      By using Curry you agree that the developer of Curry is not responsible or liable for any miss information or issues resulting from the use of Curry for any purpose.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Setup</h2>
+        	<div class="span12">
+                <p>
+                    Just like any other jQuery plugin, the javascript goes just before the closing body tag and after a jQuery library call.
+                    <br>
+                    The following code simply generates the Curry ddm which by default targets a <code>.price</code> class, look to the right.
+                </p>
+            </div>
+            <div class="span9">
+                <pre><code class="language-markup">
+&lt;div class="my-future-ddm"&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span class="price"&gt;$200&lt;/span&gt;&lt;/div&gt;
+
+...
+
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;curry.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+$(function(){ // document ready
+    $('.my-future-ddm').curry(); // startup curry
+});
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </div>
+            <div class="span3">
+                <div class="curry-2c"></div>
+                <div>Price: <span class="price">$200</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Interaction</h2>
+        	<div class="span12">
+                <p>You can override Currys conversion event by setting <code>change</code> to <code>false</code>.</p>
+                <p>This can be achived with the following code:</p>
+            </div>
+            <div class="span9">
+                <pre><code class="language-javascript">$(function(){ // document ready
+    $('.my-future-ddm').curry({ change: false }).change(function(){
+
+        var selected = $(this).find(':selected'), // get selected currency
+            rate = selected.data('rate'), // get currency rate
+            currency = selected.val(); // get currency name
+
+        console.log( currency, rate );
+
+    });
+});</code></pre>
+            </div>
+            <div class="span3">
+                <div class="curry-3"></div>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Changing targets</h2>
+        	<div class="span12">
+                <p>Curry can target any valid jQuery selector.
+                    <br>
+                    Simply use <code>target</code> and set it to point to your custom selector:
+                </p>
+            </div>
+            <div class="span9">
+                <pre><code class="language-javascript">$(function(){ // document ready
+    $('.my-future-ddm').curry({
+        // Target is set to '.price' by default but can use any valid jQuery selctor
+        target: '.hproduct .price'
+    });
+});</code></pre>
+            </div>
+            <div class="span3">
+                <div class="curry-1"></div>
+                <div class="hproduct"><span>Product Price: </span><span class="price">$2.99</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Adding custom symbols</h2>
+        	<div class="span12">
+                <p>The default symbols that come with Curry are &#36; (USD), &pound; (GBP), &euro; (EUR), &yen; (JPY).</p>
+                <p>
+                    You can replace these or add more by adding a setting called <code>symbols</code> with a hash map value.
+                    <br>
+                    For correct conversion consider using <a href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">html entities</a>.
+                </p>
+            </div>
+            <div class="span9">
+                <pre><code class="language-javascript">$(function(){
+    $('.my-future-ddm').curry({
+        symbols: {
+            'ILS' : '&#8362;', // Add Shekel currency symbol. ( HTML entity code &amp;#8362; )
+            'GBP' : '&#8356;'  // Replace GBP sign. ( HTML entity code &amp;#8356; )
+        }
+    });
+});</code></pre>
+            </div>
+            <div class="span3">
+                <div class="curry-4"></div>
+                <div><span>Product Price: </span><span class="price-2">$2.99</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <h2 id="custom-currency-values">Adding custom curency values</h2>
+        	<div class="span12">
+                <p>If you don't want to use curry's currency rates you can supply your own currency rates object.</p>
+                <p>Keep in mind that if you set yor rates according to another base or if USD is not included. You must set the base manually using the <code>base</code> property:</p>
+            </div>
+            <div class="span9">
+                <pre><code class="language-javascript">$(function(){
+    $('.my-future-ddm').curry({
+        base:   'EUR',
+        customCurrency: {
+            'EUR': 1,
+            'GBP': 0.8013,
+            'USD': 1.27
+        }
+    });
+});</code></pre>
+            </div>
+            <div class="span3">
+                <div class="curry-5"></div>
+                <div>Price: <span class="price">&euro;200</span></div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="span12">
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    var disqus_shortname = 'curryddm';
+
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="span6">
+                <p>
+                &copy; 2017. Curry is distributed under the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT</a> or <a href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL</a> license.
+                </p>
+            </div>
+            <div class="span3 offset3">
+                Curry was developed by <a href="http://www.netyou.co.il/?utm_source=curryplugin&utm_medium=website" target="_blank">NetYou</a>.
+            </div>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="prism.js"></script>
+    <script src="../curry.js"></script>
+    <script>
+
+        $(function(){
+
+            $('.curry-1').curry({
+                target: '.hproduct .price',
+                symbols: { 'ILS' : '&#8362;' }
+            });
+
+            $('.curry-2a').curry();
+
+            $('.curry-2b').curry();
+
+            $('.curry-2c').curry();
+
+            $('.curry-3')
+                .curry({ change: false })
+                .change(function(){
+
+                    var $selected = $(this).find(':selected'),
+                        rate = $selected.data('rate'),
+                        currency = $selected.val();
+
+                    console.log( currency, rate );
+                });
+
+            $('.curry-4').curry({
+                target: '.price-2',
+                symbols: {
+                    'ILS' : '&#8362;',
+                    'GBP' : '&#8356;'
+                }
+            });
+
+            $('.curry-5').curry({
+                base:   'PKR',
+                customCurrency: {
+                    'EUR': 1,
+                    'GBP': 0.8013,
+                    'USD': 1.27
+                }
+            });
+
+            $('#download-min').click(function(){
+                _gaq.push(['_trackEvent', 'Code', 'Downloaded', 'Minified']);
+            });
+
+            $('#download-tar').click(function(){
+                _gaq.push(['_trackEvent', 'Code', 'Downloaded', 'Master Tarball']);
+            });
+
+        });
+
+        // Stats (not curry related)
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36246588-1']);
+        _gaq.push(['_setDomainName', 'netyou.co.il']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+</body>
+</html>

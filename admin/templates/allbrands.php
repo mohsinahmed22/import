@@ -17,6 +17,7 @@ include("../includes/header.php"); ?>
                         </h2>
                         <p><a href="add.php?brands=add" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add Brand</a>
                         </p>
+                        <?php echo $msg;?>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -27,6 +28,9 @@ include("../includes/header.php"); ?>
                                 <th>Image</th>
                                 <th>Brand Name</th>
                                 <th>Brand Url</th>
+                                <th>Country/Region</th>
+                                <th>Standard Charges (Limit)</th>
+                                <th>VAT Charges</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -39,8 +43,11 @@ include("../includes/header.php"); ?>
                                     <td class="text-center"><img src="images/brandlogo/<?php echo $brand->img ?>" width="50" height="50" /></td>
                                     <td><?php echo $brand->brandname ?></td>
                                     <td><?php echo $brand->url ?></td>
+                                    <td><?php echo $brand->region_name ?></td>
+                                    <td><?php echo STORE_CONVERT_CUR_SYMBOL ?><?php echo $brand->standard_charges ?> (<?php echo $brand->pcs_limit ?> Items)</td>
+                                    <td><?php echo $brand->vat_charges ?>%</td>
                                     <td><a href="edit.php?brand=<?php echo $brand->id ?>">Edit</a> | <a
-                                            href="delete.php?brand=<?php echo $brand->id ?>">Delete</a></td>
+                                            href="brands.php?delete=<?php echo $brand->id ?>">Delete</a></td>
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>

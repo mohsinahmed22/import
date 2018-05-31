@@ -1,12 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Mohsin
- * Date: 5/15/2018
- * Time: 11:43 AM
- */
-
-session_start();
+<?php session_start();
 
 //Paths
 require_once (dirname(__DIR__).'/config/config.php');

@@ -41,11 +41,8 @@ if (isset($_POST['remove'])) {
 }
 if (isset($_POST['submit'])) {
 // Creating Url
-
     $req_url = parse_url($_POST['req_item_url']);
     $req_url = $req_url['scheme'] . "://" . $req_url['host'] . $req_url['path'];
-    echo $req_url;
-
 // Brand
     $new_brand_cart = new Brands();
     $newbrand = $new_brand_cart->getBrand($_POST['brand_id']);

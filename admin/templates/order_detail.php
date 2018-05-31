@@ -75,10 +75,13 @@
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th>BRand</th>
-                                        <th style="width: 39%">Url</th>
+                                        <th style="width: 10%">Brand (Region)</th>
+                                        <th style="width: 25%">Url</th>
+                                        <th style="width: 25%">Order Details</th>
                                         <th>Qty</th>
+                                        <th>VAT</th>
                                         <th>Price</th>
+                                        <th>Standard Charges</th>
                                         <th>Shipping /Per Item</th>
                                         <th>Subtotal</th>
                                     </tr>
@@ -86,20 +89,17 @@
                                     <tbody>
                                    <?php foreach ($requested_items as $item):?>
                                     <tr>
-                                        <td><?php
-                                            $brand = new Brands();
-                                            $brandname = $brand->getBrand($item->brand_id);
-                                            echo $brandname->brandname;
-                                            ?></td>
+                                        <td><?php echo $item->brandname; ?> (<?php echo $item->region_name; ?>)</td>
                                         <td><?php  echo $item->req_item_url ?></td>
+                                        <td><strong>Color:</strong> <?php echo $item->req_item_color;?><br>
+                                            <strong>Size:</strong>  <?php echo $item->req_item_size; ?><br>
+                                            <strong>Description:</strong>  <?php echo $item->req_item_description;?></td>
                                         <td><?php  echo $item->req_item_qty ?></td>
-                                        <td><?php  echo $item->req_item_price ?></td>
-                                        <td><?php
-                                            $shipping = new Shipping();
-                                            $shippingname = $shipping->getShipping($item->shipping_id);
-
-                                            ?></td>
-                                        <td><?php  echo $item->req_item_total ?></td>
+                                        <td><?php  echo $item->vat_charges ?></td>
+                                        <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php  echo $item->req_item_price ?></td>
+                                        <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $item->standard_charges ?></td>
+                                        <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $item->shipping_entity_cost ?></td>
+                                        <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php  echo $item->req_item_total ?></td>
                                     </tr>
                                    <?php endforeach;?>
                                     </tbody>
@@ -124,19 +124,19 @@
                                         <tbody>
                                         <tr>
                                             <th style="width:50%">Subtotal:</th>
-                                            <td><?php echo $order_detail->request_total_product_amount ;?></td>
+                                            <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $order_detail->request_total_product_amount ;?></td>
                                         </tr>
-                                        <tr>
-                                            <th>Tax (9.3%)</th>
-                                            <td>$0.00</td>
-                                        </tr>
+<!--                                        <tr>-->
+<!--                                            <th>Tax (9.3%)</th>-->
+<!--                                            <td>--><?php //echo STORE_DEFAULT_CUR_SYMBOL ?><!----><?php //?><!--</td>-->
+<!--                                        </tr>-->
                                         <tr>
                                             <th>Shipping:</th>
-                                            <td><?php echo $order_detail->request_total_shipping_amount ;?></td>
+                                            <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $order_detail->request_total_shipping_amount ;?></td>
                                         </tr>
                                         <tr>
                                             <th>Total:</th>
-                                            <td><?php echo $order_detail->request_total_amount ;?></td>
+                                            <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $order_detail->request_total_amount ;?></td>
                                         </tr>
                                         </tbody>
                                     </table>

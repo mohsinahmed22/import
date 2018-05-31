@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2550470125">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="MySQL - importhub_form_db@localhost" uuid="2eb31811-5e56-4d1c-924a-a1f64216e6e4">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>

@@ -12,8 +12,21 @@ $Allbrands = new Brands();
 
 $template = new Templates("templates/allbrands.php");
 
-
 $template->brands = $Allbrands->getAllBrands();
+if(isset($_GET['msg'])){
+    $template->msg = '<div class="col-sm-12 alert alert-success">Brand Successfully Deleted</div>"';
+}else{
+    $template->msg= "";
+}
+if(isset($_GET['delete'])){
+    $brand = new Brands();
+    if($brand->deleteBrand($_GET['delete'])){
+        header('Location: brands.php?msg='.urlencode('Brand Successfully Deleted'));
+        exit();
+
+    }
+
+}
 
 
 echo $template;

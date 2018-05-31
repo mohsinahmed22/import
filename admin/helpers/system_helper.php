@@ -27,3 +27,18 @@ function currency_api(){
     // Access the exchange rate values, e.g. GBP:
     return $exchangeRates;
 }
+
+
+function append_to_session_array($var_name)
+{
+    if (is_array($_SESSION[$var_name])) {
+        if (!isset($_SESSION[$var_name])) {
+            $_SESSION[$var_name] = "";
+        } else {
+            $_SESSION[$var_name][] = $_POST[$var_name];
+        }
+
+    } else {
+        $_SESSION[$var_name] = array($_POST[$var_name]);
+    }
+}

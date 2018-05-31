@@ -12,5 +12,4 @@ $template = new Templates("templates/dashboard.php");
 
 
 
-
 echo $template;

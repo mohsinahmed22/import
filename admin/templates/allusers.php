@@ -12,8 +12,8 @@ include("../includes/header.php"); ?>
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Brands List
-                            <small>Users</small>
+                        <h2>Admin Users List
+                            <small></small>
                         </h2>
                         <p><a href="add.php?users=addnew" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add User</a>
                         </p>

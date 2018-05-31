@@ -25,9 +25,31 @@ include("../includes/header.php");?>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
+<?php $region_names = null;
+switch($region_names){
+    case 'US': echo "USD"; break;
+    case 'CA': echo "CAD"; break;
+    case 'UK': echo "GBP."; break;
+    default: echo STORE_DEFAULT_CUR_SYMBOL; break;
+}
+?>
+
+
                     <br />
                     <form id="brand" data-parsley-validate class="form-horizontal form-label-left" method="post" enctype="multipart/form-data">
-
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Region/Country <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <select name="region_name" class="form-control col-md-7 col-xs-12">
+<!--                                    <option value="--><?php //echo $reg->region_code ?><!--" --><?php //if($region_names ==  $reg->region_code){ echo " selected"; }?><!-->--><?php //echo $reg->region_name ?><!--</option>-->
+                                    <?php foreach($region as $reg):?>
+                                        <option value="<?php echo $reg->region_code ?>" ><?php echo $reg->region_name ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+<!--                                <input type="text" name="brandname" required="required" class="form-control col-md-7 col-xs-12">-->
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Brand Name <span class="required">*</span>
                             </label>
@@ -52,6 +74,65 @@ include("../includes/header.php");?>
                             <p class="help-block"></p>
                                 </div>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Standard Charges<span class="required">*</span>
+                            </label>
+                            <div class="input-group col-md-6 col-sm-6 col-xs-12">
+                                <input type="number" class="form-control" name="standard_charges" placeholder="Please Enter Standard Charges" aria-describedby="basic-addon2">
+                                <span class="input-group-addon" id="basic-addon2"><?php
+//                                    if(isset($_POST['region_name'])){
+//                                        $region_names = $_POST['region_name'];
+//                                    }
+//                                    foreach($region as $reg):
+//                                        if ($region_names == $reg->region_code){
+//                                            echo  $reg->region_cur_symbol;
+//                                        }else{
+//                                            echo STORE_DEFAULT_CUR_SYMBOL;
+//                                        }
+//                                    endforeach;
+
+//                                    switch($region_names){
+//                                        case 'US': echo "USD"; break;
+//                                        case 'CA': echo "CAD"; break;
+//                                        case 'UK': echo "GBP"; break;
+//                                        default: echo STORE_DEFAULT_CUR_SYMBOL; break;
+//                                    }
+                                    echo STORE_DEFAULT_CUR_SYMBOL; ?>
+</span>
+
+                            </div>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                            <div class="input-group col-md-6 col-sm-6 col-xs-12">
+                                <p class="help-block">Standard charges applied on each item</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Items Limits for Standard Charges<span class="required">*</span>
+                            </label>
+                            <div class="input-group col-md-6 col-sm-6 col-xs-12">
+                                <input type="number" class="form-control" name="pcs_limit" placeholder="Please Enter Items Limits" aria-describedby="basic-addon2" value="2">
+                                <span class="input-group-addon" id="basic-addon2">Items</span>
+
+                            </div>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                            <div class="input-group col-md-6 col-sm-6 col-xs-12">
+                                <p class="help-block">This will ignore standard charges after given number</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">VAT Charges<span class="required">*</span>
+                            </label>
+                            <div class="input-group col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="form-control" name="vat_charges" placeholder="Please Enter VAT Charges " aria-describedby="basic-addon2">
+                                <span class="input-group-addon" id="basic-addon2">%</span>
+
+                            </div>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                            <div class="input-group col-md-6 col-sm-6 col-xs-12">
+                            <p class="help-block">VAT charges according to brand in Percentage (%)</p>
+                                </div>
+                        </div>
 
                         <div class="ln_solid"></div>
                         <div class="form-group">
@@ -59,6 +140,8 @@ include("../includes/header.php");?>
                                 <button type="submit" name="add_brand" class="btn btn-success">Add New Brand</button>
                             </div>
                         </div>
+
+
 
                     </form>
                 </div>

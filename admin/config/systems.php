@@ -14,6 +14,8 @@ define ('STORE_EMAIL', $Allsettings['store_email']);
 
 
 // Default Currency
-//define ('STORE_DEFAULT_CONVERSION_CUR', $Allsettings['store_default_conversion_cur']);
-//define ('STORE_DEFAULT_FRONT_CUR', $Allsettings['store_default_front_cur']);
+define ('STORE_DEFAULT_CUR', 'PKR');
+define ('STORE_DEFAULT_CUR_SYMBOL', 'Rs.');
+define ('STORE_CONVERT_CUR', 'USD');
+define ('STORE_CONVERT_CUR_SYMBOL', '$');
 

@@ -10,6 +10,7 @@ class User
 {
     // Initializing DB
     private $db;
+    public $is_logged_in = false;
 
     public function __construct()
     {
@@ -50,6 +51,40 @@ class User
         }
     }
 
+    public function login($username, $password){
+        $this->db->query("SELECT * FROM users WHERE 
+                                 username = :username AND 
+                                 password =:password
+                                 ");
+        $this->db->bind(':username', $username);
+        $this->db->bind(':password', $password);
+        $row = $this->db->single();
 
+        if($this->db->rowCount()> 0 ){
+            $this->setUserData($row);
+            return true;
+        }else{
+
+            return false;
+        }
+    }
+
+    public function setUserData($row)
+    {
+        $_SESSION['is_logged_in'] = true;
+        $_SESSION['user_id'] = $row->id;
+        $_SESSION['admin_username'] = $row->username;
+        $_SESSION['admin_first_name'] = $row->first_name;
+        $_SESSION['admin_last_name'] = $row->last_name;
+    }
+    public  function is_logged_in(){
+        if(isset($_SESSION['is_logged_in'])){
+            return true;
+        }else{
+
+            return false;
+        }
+
+    }
 
 }

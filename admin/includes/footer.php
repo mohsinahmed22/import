@@ -25,7 +25,7 @@
 <script src="assets/js/dataTables.bootstrap.min.js"></script>
 <script src="assets/js/dataTables.buttons.min.js"></script>
 <script src="assets/js/buttons.bootstrap.min.js"></script>
-<script src="assets/daterangepicker.js"></script>
+<script src="assets/js/daterangepicker.js"></script>
 <script src="assets/js/buttons.flash.min.js"></script>
 <script src="assets/js/buttons.html5.min.js"></script>
 <script src="assets/js/buttons.print.min.js"></script>

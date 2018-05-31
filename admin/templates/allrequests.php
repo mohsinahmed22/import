@@ -13,7 +13,7 @@ include("../includes/header.php"); ?>
                 <div class="x_panel">
                     <div class="x_title">
                         <h2>Order List
-                            <small>Users</small>
+                            <small></small>
                         </h2>
                         <div class="clearfix"></div>
                     </div>
@@ -39,12 +39,11 @@ include("../includes/header.php"); ?>
                                     <td><?php echo $req->customer_id ?></td>
                                     <td><?php echo $req->request_date ?></td>
                                     <td><?php echo $req->request_total_qty ?></td>
-                                    <td><?php echo $req->request_total_shipping_amount ?></td>
-                                    <td><?php echo $req->request_total_product_amount ?></td>
-                                    <td><?php echo $req->request_total_amount ?></td>
+                                    <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $req->request_total_shipping_amount ?></td>
+                                    <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $req->request_total_product_amount ?></td>
+                                    <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $req->request_total_amount ?></td>
                                     <td><?php echo $req->request_status ?></td>
-                                    <td><a href="view.php?order=<?php echo $req->id ?>&customer=<?php echo $req->customer_id; ?>">View</a> | <a
-                                            href="delete.php?order=<?php echo $req  ->id ?>">Delete</a></td>
+                                    <td><a href="view.php?order=<?php echo $req->id ?>&customer=<?php echo $req->customer_id; ?>">View</a></td>
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2018 at 02:11 PM
+-- Generation Time: May 27, 2018 at 06:52 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.13
 
@@ -32,18 +32,23 @@ CREATE TABLE `brands` (
   `id` int(11) NOT NULL,
   `brandname` varchar(255) DEFAULT NULL,
   `img` varchar(255) DEFAULT NULL,
-  `url` varchar(255) DEFAULT NULL
+  `url` varchar(255) DEFAULT NULL,
+  `standard_charges` float(8,2) DEFAULT '0.00',
+  `pcs_limit` int(11) DEFAULT '2',
+  `vat_charges` float(8,2) DEFAULT '0.00',
+  `region_name` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `brands`
 --
 
-INSERT INTO `brands` (`id`, `brandname`, `img`, `url`) VALUES
-(11, 'Zara', '1460811175.jpg', 'https://www.zara.com/uk/'),
-(13, 'Sports Direct', 'noimage.png', 'https://www.sportsdirect.com/'),
-(14, 'H&M', '1450863941.jpg', 'http://www2.hm.com/en_gb'),
-(15, 'Gucci', '1488063368.jpg', 'https://www.gucci.com/uk/en_gb');
+INSERT INTO `brands` (`id`, `brandname`, `img`, `url`, `standard_charges`, `pcs_limit`, `vat_charges`, `region_name`) VALUES
+(11, 'Zara', '1460811175.jpg', 'https://www.zara.com/uk/', 640.00, 2, 8.30, 'UK'),
+(13, 'Sports Direct', 'noimage.png', 'https://www.sportsdirect.com/', 640.00, 2, 8.30, 'UK'),
+(14, 'H&M', '1450863941.jpg', 'http://www2.hm.com/en_gb', 640.00, 2, 8.30, 'US'),
+(15, 'Gucci', '1488063368.jpg', 'https://www.gucci.com/uk/en_gb', 640.00, 2, 8.30, 'UK'),
+(16, 'Armani', '1488063686.jpg', 'https://www.armani.com/gb/armanicom', 640.00, 2, 8.30, 'UK');
 
 -- --------------------------------------------------------
 
@@ -62,13 +67,29 @@ CREATE TABLE `customers` (
   `customer_type` varchar(255) DEFAULT 'Guest'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `customers`
+-- Table structure for table `region`
 --
 
-INSERT INTO `customers` (`customer_id`, `first_name`, `last_name`, `email`, `phone`, `mobile`, `address`, `customer_type`) VALUES
-(26, '', '', '', '', '', '', 'Guest'),
-(27, 'Tahreem', 'Quershi', 'T@gmail.com', '02136637829', '923313644820', 'C117 block J north nazimbad', 'Guest');
+CREATE TABLE `region` (
+  `id` int(11) NOT NULL,
+  `region_name` varchar(255) DEFAULT NULL,
+  `region_code` varchar(255) DEFAULT NULL,
+  `region_cur` varchar(255) DEFAULT NULL,
+  `region_cur_symbol` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `region`
+--
+
+INSERT INTO `region` (`id`, `region_name`, `region_code`, `region_cur`, `region_cur_symbol`) VALUES
+(1, 'USA', 'US', 'USD', '$'),
+(2, 'Canada', 'CA', 'CAD', '$'),
+(3, 'Pakistan', 'PK', 'PKR', 'Rs.'),
+(4, 'United Kingdom', 'UK', 'GBP', 'Â£');
 
 -- --------------------------------------------------------
 
@@ -87,14 +108,6 @@ CREATE TABLE `request` (
   `request_status` varchar(255) DEFAULT 'Processing'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `request`
---
-
-INSERT INTO `request` (`id`, `customer_id`, `request_total_amount`, `request_total_qty`, `request_total_shipping_amount`, `request_total_product_amount`, `request_date`, `request_status`) VALUES
-(16, 26, 1932.00, 5, 1495.00, 437.00, '2018-05-19 12:08:44', 'Processing'),
-(17, 27, 1995.00, 5, 1495.00, 500.00, '2018-05-19 12:16:49', 'Processing');
-
 -- --------------------------------------------------------
 
 --
@@ -105,25 +118,19 @@ CREATE TABLE `requested_items` (
   `id` int(11) NOT NULL,
   `request_id` int(11) DEFAULT NULL,
   `customer_id` int(11) DEFAULT NULL,
-  `brand_id` int(11) DEFAULT NULL,
-  `shipping_id` int(11) DEFAULT NULL,
+  `brandname` varchar(255) DEFAULT NULL,
+  `shipping_entity_cost` varchar(255) DEFAULT NULL,
   `req_item_url` varchar(255) DEFAULT NULL,
   `req_item_qty` int(11) DEFAULT NULL,
   `req_item_price` float(8,2) DEFAULT NULL,
   `req_item_total` float(8,2) DEFAULT NULL,
-  `shipping_cost` int(11) DEFAULT NULL
+  `region_name` varchar(255) DEFAULT NULL,
+  `req_item_description` text,
+  `req_item_color` varchar(255) DEFAULT NULL,
+  `req_item_size` varchar(255) DEFAULT NULL,
+  `standard_charges` float(8,2) DEFAULT NULL,
+  `vat_charges` float(8,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `requested_items`
---
-
-INSERT INTO `requested_items` (`id`, `request_id`, `customer_id`, brandname, shipping_entity_cost, `req_item_url`, `req_item_qty`, `req_item_price`, `req_item_total`, region_name) VALUES
-(5, 15, 25, 11, 299, 'http://www2.hm.com/en_gb', 1, 300.00, 300.00, NULL),
-(6, 16, 26, 11, 299, 'https://www.toolmarts.com', 2, 100.00, 200.00, NULL),
-(7, 16, 26, 13, 299, 'http://www2.hm.com/en_gb', 3, 79.00, 237.00, NULL),
-(8, 17, 27, 11, 299, 'https://www.toolmarts.com', 3, 100.00, 300.00, NULL),
-(9, 17, 27, 13, 299, 'https://www.toolmarts.com', 2, 100.00, 200.00, NULL);
 
 -- --------------------------------------------------------
 
@@ -137,6 +144,16 @@ CREATE TABLE `settings` (
   `setting_value` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `settings`
+--
+
+INSERT INTO `settings` (`id`, `setting_name`, `setting_value`) VALUES
+(1, 'store_name', 'ImportHub.pk'),
+(2, 'store_phone', '923313644820'),
+(3, 'store_email', 'contact@mohsin-ahmed.com'),
+(4, 'store_url', 'https://www.mohsin-ahmed.com');
+
 -- --------------------------------------------------------
 
 --
@@ -146,7 +163,7 @@ CREATE TABLE `settings` (
 CREATE TABLE `shipping` (
   `id` int(11) NOT NULL,
   `shipping_entity_name` varchar(255) DEFAULT NULL,
-  `shipping_entity_cost` varchar(255) DEFAULT NULL
+  `shipping_entity_cost` float(8,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -154,15 +171,15 @@ CREATE TABLE `shipping` (
 --
 
 INSERT INTO `shipping` (`id`, `shipping_entity_name`, `shipping_entity_cost`) VALUES
-(4, 'Shirt / Trouser', '299'),
-(5, 'Shoes', '999'),
-(6, 'Jacket / Coat', '999'),
-(7, 'Cosmetics/Medicine', '999'),
-(8, 'Handbags', '999'),
-(9, 'Watches/ Sunglasses', '999'),
-(10, 'Small Electronics (No Phones & Tablets)', '999'),
-(11, 'Undergarments / Accessoires', '999'),
-(12, 'Accessories /Misc Items', '999');
+(4, 'Shirt / Trouser', 299.00),
+(5, 'Shoes', 999.00),
+(6, 'Jacket / Coat', 999.00),
+(7, 'Cosmetics/Medicine', 999.00),
+(8, 'Handbags', 999.00),
+(9, 'Watches/ Sunglasses', 999.00),
+(10, 'Small Electronics (No Phones & Tablets)', 999.00),
+(11, 'Undergarments / Accessoires', 999.00),
+(12, 'Accessories /Misc Items', 999.00);
 
 -- --------------------------------------------------------
 
@@ -208,6 +225,12 @@ ALTER TABLE `customers`
   ADD PRIMARY KEY (`customer_id`);
 
 --
+-- Indexes for table `region`
+--
+ALTER TABLE `region`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `request`
 --
 ALTER TABLE `request`
@@ -245,31 +268,37 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT for table `region`
+--
+ALTER TABLE `region`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `request`
 --
 ALTER TABLE `request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `requested_items`
 --
 ALTER TABLE `requested_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `shipping`

@@ -13,10 +13,8 @@ include("../includes/header.php"); ?>
                 <div class="x_panel">
                     <div class="x_title">
                         <h2>Customers List
-                            <small>Users</small>
+                            <small></small>
                         </h2>
-                        <p><a href="add.php?customers=addnew" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add Customers</a>
-                        </p>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">

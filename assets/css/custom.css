@@ -11,7 +11,7 @@ html , body{
  
  }
 
-.ordering_list  input, .ordering_list  select {margin:0  0 20px;; font-size: 20px; color:#555 !important; padding: 10px;
+.ordering_list textarea, .ordering_list  input, .ordering_list  select {margin:0  0 20px;; font-size: 20px; color:#555 !important; padding: 10px;
     height: 60px;}
 .ordering_list option {font-size: 20px !important; color: #555 !important;}
 .ordering_list {
@@ -20,6 +20,7 @@ html , body{
     border: 1px solid #ccc;
 
 }
+.sd-charges li {border:none !important;}
 .cart_detail h3, .info-form h3{ font-size:20px; font-weight: 400; border-bottom: 1px dotted #eee;}
 .cart_detail select, .cart_detail input, .info-form select,.info-form input {margin-bottom: 10px; font-size: 16px;}
 .product.cart-list li{padding: 2%;}
@@ -33,6 +34,8 @@ html , body{
     margin-bottom: 20px;
 
     padding-bottom: 10px;}
+.price-curr input.form-control{width:50%;}
+.price-curr select.form-control{width:50%;}
 .full-height{
  height:100%;
  }

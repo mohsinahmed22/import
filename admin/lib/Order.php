@@ -17,6 +17,9 @@ class Order
     }
 
 
+    /*
+    * Get All Orders
+    */
     public function getAllOrders(){
         $query = "SELECT * FROM request ";
         $this->db->query($query);
@@ -26,6 +29,9 @@ class Order
     }
 
 
+    /*
+    * Get Order Detail
+    */
     public function getOrderDetail($id){
         $this->db->query("SELECT * FROM request WHERE id = :id");
         $this->db->bind(":id", $id);
@@ -35,6 +41,9 @@ class Order
     }
 
 
+    /*
+    * Add Orders
+    */
     public function register($data){
         $this->db
             ->query("INSERT INTO request 
@@ -52,6 +61,10 @@ class Order
             return false;
         }
     }
+
+    /*
+    * Get Last Inserted Id
+    */
     public function last_request_insert_id(){
         return $this->db->last_insert_id();
     }

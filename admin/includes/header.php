@@ -6,7 +6,11 @@
  * Time: 12:19 PM
  */
 ob_start();
-
+$user = new User();
+if(!$user->is_logged_in()){
+    header("Location: login.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +69,7 @@ ob_start();
                             <li><a href="brands.php"><i class="fa fa-users"></i> Brands <span class="fa fa-chevron-right"></span></a></li>
                             <li><a href="users.php"><i class="fa fa-home"></i> Users <span class="fa fa-chevron-right"></span></a></li>
                             <li><a href="shipping.php"><i class="fa fa-home"></i> Shipping <span class="fa fa-chevron-right"></span></a></li>
+                            <li><a href="region.php"><i class="fa fa-home"></i>  Region / Currency<span class="fa fa-chevron-right"></span></a></li>
                             <li><a href="setting.php"><i class="fa fa-home"></i> Settings <span class="fa fa-chevron-right"></span></a></li>
 
                         </ul>
@@ -85,22 +90,7 @@ ob_start();
                     </div>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="">
-                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="assets/images/img.jpg" alt="">Mohsin Ahmed
-                                <span class=" fa fa-angle-down"></span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="profile.php"> Profile</a></li>
-                                <li>
-                                    <a href="setting.php">
-                                        <span class="badge bg-red pull-right">50%</span>
-                                        <span>Settings</span>
-                                    </a>
-                                </li>
-                                <li><a href="logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                            </ul>
-                        </li>
+                        <li  class="user-profile dropdown-toggle" ><a href="logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                     </ul>
                 </nav>
             </div>

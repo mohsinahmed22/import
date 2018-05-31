@@ -12,11 +12,12 @@ include("../includes/header.php"); ?>
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Brands List
-                            <small>Users</small>
+                        <h2>Shipping Methods List
+                            <small></small>
                         </h2>
                         <p><a href="add.php?shipping=addnew" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add Shipping</a>
                         </p>
+                        <?php echo $msg; ?>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -36,9 +37,9 @@ include("../includes/header.php"); ?>
                                 <tr>
                                     <td><?php echo $ship->id ?></td>
                                     <td><?php echo $ship->shipping_entity_name ?></td>
-                                    <td><?php echo $ship->shipping_entity_cost ?></td>
+                                    <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $ship->shipping_entity_cost ?></td>
                                     <td><a href="edit.php?shipping=<?php echo $ship->id ?>">Edit</a> | <a
-                                            href="delete.php?shipping=<?php echo $ship->id ?>">Delete</a></td>
+                                            href="shipping.php?delete=<?php echo $ship->id ?>">Delete</a></td>
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>
