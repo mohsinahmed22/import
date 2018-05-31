@@ -2,50 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e006641-d2c3-4b8e-a0b2-96d51efda8c1" name="Default" comment="major update">
-      <change afterPath="$PROJECT_DIR$/admin/assets/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/lib/Region.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/region.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/templates/add_region.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/templates/allregion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/templates/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkindex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cur/README.ml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cur/curry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cur/curry.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cur/demo/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cur/demo/prism.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cur/demo/prism.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importhub_form_db_bk_27may2018.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/t.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importhub_form_db_1st_june.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/brands.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/brands.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/systems.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/systems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/core/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/core/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/helpers/system_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/helpers/system_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/lib/Brands.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/Brands.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/lib/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/lib/RequestItems.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/RequestItems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/lib/Shipping.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/Shipping.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/lib/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/shipping.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/shipping.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/templates/add_brand.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/add_brand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/templates/allbrands.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/allbrands.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/templates/allcustomers.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/allcustomers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/templates/allrequests.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/allrequests.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/templates/allsettings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/allsettings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/templates/allshipping.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/allshipping.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/templates/allusers.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/allusers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/templates/order_detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/order_detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importhub_form_db21may2018.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importhub_form_db21may2018.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,88 +72,25 @@
     <favorites_list name="import" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="region.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/region.php">
+    <leaf>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/includes/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+            <state relative-caret-position="374">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="allregion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/templates/allregion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="45" column="67" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allrequests.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/templates/allrequests.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allcustomers.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/templates/allcustomers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allusers.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/templates/allusers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allbrands.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/templates/allbrands.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Region.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Region.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/lib/Region.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+            <state relative-caret-position="316">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <marker date="1527790512520" expanded="true" signature="308:328" ph="SELECT * FRO... region" />
                 <marker date="1527790512520" expanded="true" signature="553:718" ph="INSERT INTO region... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/lib/Order.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
             </state>
           </provider>
         </entry>
@@ -214,6 +110,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="0e58da62e00e347c16ac788b5d7c13f0d8bd37df" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -345,25 +246,6 @@
               <item name="import" type="b2602c69:ProjectViewProjectNode" />
               <item name="import" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="import" type="b2602c69:ProjectViewProjectNode" />
-              <item name="import" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="import" type="b2602c69:ProjectViewProjectNode" />
-              <item name="import" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="import" type="b2602c69:ProjectViewProjectNode" />
-              <item name="import" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -371,17 +253,6 @@
               <item name="import" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="import" type="b2602c69:ProjectViewProjectNode" />
-              <item name="import" type="462c0819:PsiDirectoryNode" />
-              <item name="gentelella-master" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="import" type="b2602c69:ProjectViewProjectNode" />
-              <item name="import" type="462c0819:PsiDirectoryNode" />
-              <item name="gentelella-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -405,15 +276,15 @@
     <property name="settings.editor.selected.configurable" value="Docker" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\import" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\import\admin\assets\css" />
       <recent name="D:\xampp\htdocs\import\admin" />
       <recent name="D:\xampp\htdocs\import" />
       <recent name="D:\xampp\htdocs\import\admin\templates" />
       <recent name="D:\xampp\htdocs\import\admin\lib" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\import" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -489,33 +360,45 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124989000" />
+    <option name="totallyTimeSpent" value="125157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.23279649" side_tool="true" visible="true" weight="0.24413146" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.24483307" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.7672035" visible="true" weight="0.24413146" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.329429" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19033675" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19033675" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" weight="0.3290938" />
       <window_info anchor="right" id="Database" order="4" visible="true" weight="0.15446559" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" weight="0.3290938" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.329429" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19033675" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.24483307" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.15446559" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.2801252" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,6 +415,14 @@
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
               </option>
             </State>
           </value>
@@ -674,13 +565,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lib/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/lib/Session.php" />
     <entry file="file://$PROJECT_DIR$/admin/helpers/system_helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
@@ -758,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gentelella-master/production/form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -835,17 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lib/Region.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-          <folding>
-            <marker date="1527790512520" expanded="true" signature="308:328" ph="SELECT * FRO... region" />
-            <marker date="1527790512520" expanded="true" signature="553:718" ph="INSERT INTO region... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/templates/add_brand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
@@ -902,6 +769,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
           <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/lib/Region.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <marker date="1527790512520" expanded="true" signature="308:328" ph="SELECT * FRO... region" />
+            <marker date="1527790512520" expanded="true" signature="553:718" ph="INSERT INTO region... " />
+          </folding>
         </state>
       </provider>
     </entry>
