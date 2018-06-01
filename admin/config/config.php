@@ -9,3 +9,5 @@ define("SITE_TITLE", "Welcome To Hub");
 
 //Paths
 define ('BASE_URI', 'http://'.$_SERVER['SERVER_NAME'].':8080/import/');
+//Paths
+define ('BASE_ADMIN_IMAGE_URI', BASE_URI . 'admin/images/');
