@@ -42,7 +42,7 @@ include("../includes/header.php"); ?>
                                     <td><?php echo $reg->region_code ?></td>
                                     <td><?php echo $reg->region_cur ?></td>
                                     <td><?php echo $reg->region_cur_symbol ?></td>
-                                    <td><a href="edit.php?brand=<?php echo $reg->id ?>">Edit</a> | <a
+                                    <td><a href="edit.php?region=<?php echo $reg->id ?>">Edit</a> | <a
                                             href="region.php?delete=<?php echo $reg->id ?>">Delete</a></td>
                                 </tr>
                             <?php endforeach; ?>

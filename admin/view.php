@@ -22,9 +22,17 @@ if(isset($_GET['order'])){
     $template->customer_detail = $customer_detail->getCustomer($_GET['customer']);
 
 
-}elseif(isset($_GET['users'])){
-    $template = new Templates("templates/add_user.php");
-    $template->title = "Add New Users";
+}elseif(isset($_GET['customer'])){
+    $template = new Templates("templates/customer_orders.php");
+    $template->title = "Customer Order List";
+
+    $orders = new Order();
+    $customer = new Customer();
+    $template->orders = $orders->getAllCustomerOrders($_GET['customer']);
+    $template->customer = $customer->getCustomer($_GET['customer']);
+
+
+
 }elseif(isset($_GET['shipping'])){
     $template = new Templates("templates/add_shipping.php");
     $template->title = "Add New Shipping";

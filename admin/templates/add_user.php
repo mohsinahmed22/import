@@ -31,8 +31,8 @@ include("../includes/header.php");?>
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Status <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                Active: <input type="radio" class="flat" name="is_active" value="1" checked="" required />
-                                Disable: <input type="radio" class="flat" name="is_active" value="0" />
+                                <input type="radio" class="flat" name="is_active" value="1" checked="" required /> Active &nbsp;  &nbsp;
+                                <input type="radio" class="flat" name="is_active" value="0" /> Disable
                             </div>
                         </div>
                         <div class="form-group">
@@ -40,9 +40,8 @@ include("../includes/header.php");?>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <select  name="role" class="form-control" required>
-                                    <option value="">Choose..</option>
                                     <option value="administrator">Administrator</option>
-                                    <option value="customer">Customer</option>
+                                    <option value="Staff" selected>Staff</option>
                                 </select>
                             </div>
                         </div>
@@ -58,7 +57,7 @@ include("../includes/header.php");?>
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">password <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="password" required="required" class="form-control col-md-7 col-xs-12">
+                                <input type="password" name="password" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
 

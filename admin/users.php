@@ -13,7 +13,18 @@ $user = new User();
 
 $template->users = $user->getAllUsers();
 
-
+if(isset($_GET['msg'])){
+    $template->msg = '<div class="col-sm-12 alert alert-success">'. $_GET['msg'].'</div>';
+}else{
+    $template->msg= "";
+}
+if(isset($_GET['delete'])){
+    $u = new User();
+    if($u->deleteUser($_GET['delete'])){
+        header('Location: brands.php?msg='.urlencode('User Successfully Deleted'));
+        exit();
+    }
+}
 
 
 echo $template;

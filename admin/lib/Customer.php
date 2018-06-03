@@ -33,6 +33,16 @@ class Customer extends user
         return $result;
     }
 
+    /*
+     * Get Latest Orders
+     */
+    public function getlatestCustomers(){
+        $query = "SELECT * FROM customers ORDER BY customer_id DESC LIMIT 5 ";
+        $this->db->query($query);
+
+        $result = $this->db->resultset();
+        return $result;
+    }
 
     public function register($data){
         $this->db

@@ -28,6 +28,30 @@ class Order
         return $result;
     }
 
+    /*
+   * Get All Orders
+   */
+    public function getAllCustomerOrders($customer_id){
+        $query = "SELECT * FROM request where customer_id = :customer_id";
+        $this->db->query($query);
+        $this->db->bind(':customer_id', $customer_id);
+
+        $result = $this->db->resultset();
+        return $result;
+    }
+
+    /*
+     * Get Latest Orders
+     */
+    public function getlatestOrders(){
+        $query = "SELECT * FROM request ORDER BY id DESC LIMIT 5";
+        $this->db->query($query);
+
+
+        $result = $this->db->resultset();
+        return $result;
+    }
+
 
     /*
     * Get Order Detail

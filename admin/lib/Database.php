@@ -68,6 +68,12 @@ class Database
     public function single(){
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
+
+    }
+    public function sum(){
+        $this->execute();
+        return $this->stmt->fetch(PDO::FETCH_COLUMN);
+
     }
 
     public function rowCount(){

@@ -14,7 +14,7 @@ $template = new Templates("templates/allbrands.php");
 
 $template->brands = $Allbrands->getAllBrands();
 if(isset($_GET['msg'])){
-    $template->msg = '<div class="col-sm-12 alert alert-success">Brand Successfully Deleted</div>"';
+    $template->msg = '<div class="col-sm-12 alert alert-success">'. $_GET['msg'].'</div>';
 }else{
     $template->msg= "";
 }

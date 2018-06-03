@@ -26,6 +26,17 @@ class Brands
         $result = $this->db->resultset();
         return $result;
     }
+    /*
+   * Select Limited Brands
+   */
+    public function getLimitBrands($limit = 4){
+        $query = "SELECT * FROM brands LIMIT $limit";
+        $this->db->query($query);
+
+        $result = $this->db->resultset();
+        return $result;
+    }
+
 
 
     /*
@@ -61,6 +72,39 @@ class Brands
             return false;
         }
     }
+
+    /*
+     * Edit User
+     */
+
+    public function update($data){
+        $this->db->query("
+                    UPDATE brands SET 
+                    brandname = :brandname,
+                    url = :url,
+                    standard_charges = :standard_charges,
+                    pcs_limit = :pcs_limit,
+                    vat_charges = :vat_charges,
+                    region_name = :region_name
+                    where id = :id
+                    ");
+        $this->db->bind(":id", $data['id']);
+        $this->db->bind(":brandname", $data['brandname']);
+//        $this->db->bind(":img", $data['img']);
+        $this->db->bind(":url", $data['url']);
+        $this->db->bind(":standard_charges", $data['standard_charges']);
+        $this->db->bind(":pcs_limit", $data['pcs_limit']);
+        $this->db->bind(":vat_charges", $data['vat_charges']);
+        $this->db->bind(":region_name", $data['region_name']);
+
+
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
         /*
          * Upload User brandlogo

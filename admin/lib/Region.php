@@ -29,6 +29,19 @@ class Region
 
     }
 
+
+    /*
+   * Select Region by id
+   */
+    public function getRegion($id){
+        $this->db->query("SELECT * FROM region where id = :id");
+        $this->db->bind(':id', $id);
+
+        $result = $this->db->single();
+        return $result;
+    }
+
+
     /*
     * Add Region
     */
@@ -36,6 +49,29 @@ class Region
         $this->db->query("
                     INSERT INTO region (region_name, region_code, region_cur, region_cur_symbol)
                      VAlUE (:region_name, :region_code, :region_cur, :region_cur_symbol)");
+        $this->db->bind(':region_name', $data['region_name']);
+        $this->db->bind(':region_code', $data['region_code']);
+        $this->db->bind(':region_cur', $data['region_cur']);
+        $this->db->bind(':region_cur_symbol', $data['region_cur_symbol']);
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+    /*
+   * Update Region
+   */
+    public function update($data){
+        $this->db->query("
+                    UPDATE region SET 
+                    region_code = :region_code,
+                    region_name = :region_name,
+                    region_cur = :region_cur,
+                    region_cur_symbol = :region_cur_symbol 
+                    where id = :id ");
+        $this->db->bind(':id', $data['id']);
         $this->db->bind(':region_name', $data['region_name']);
         $this->db->bind(':region_code', $data['region_code']);
         $this->db->bind(':region_cur', $data['region_cur']);

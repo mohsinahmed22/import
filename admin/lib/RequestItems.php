@@ -18,7 +18,7 @@ class RequestItems
 
 
     public function getAllRequestItems(){
-        $query = "SELECT * FROM request_items ";
+        $query = "SELECT * FROM requested_items ";
         $this->db->query($query);
 
         $result = $this->db->resultset();
@@ -32,6 +32,26 @@ class RequestItems
 
         $result = $this->db->resultset();
         return $result;
+    }
+
+
+    public function getBrandsOrderCount(){
+        $query = "SELECT brandname FROM requested_items ";
+        $this->db->query($query);
+        $result = $this->db->resultset();
+        $arr = array();
+        $count = 0;
+        for ($i = 0; $i < $this->db->rowCount(); $i++){
+                if(!isset($arr[$result[$i]->brandname])){
+                    $count = 1;
+                    $arr[$result[$i]->brandname] = $count;
+                }else {
+                    $arr[$result[$i]->brandname] = $count+1;
+
+                }
+
+        }
+        return $arr;
     }
 
 

@@ -8,6 +8,6 @@ define('DB_NAME','importhub_form_db');
 define("SITE_TITLE", "Welcome To Hub");
 
 //Paths
-define ('BASE_URI', 'http://'.$_SERVER['SERVER_NAME'].':8080/import/');
+define ('BASE_URI', 'http://'.$_SERVER['SERVER_NAME'].'/import/');
 //Paths
 define ('BASE_ADMIN_IMAGE_URI', BASE_URI . 'admin/images/');

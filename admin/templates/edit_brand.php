@@ -32,12 +32,10 @@ include("../includes/header.php");?>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <select name="region_name" class="form-control col-md-7 col-xs-12">
-<!--                                    <option value="--><?php //echo $reg->region_code ?><!--" --><?php //if($region_names ==  $reg->region_code){ echo " selected"; }?><!-->--><?php //echo $reg->region_name ?><!--</option>-->
                                     <?php foreach($region as $reg):?>
                                         <option value="<?php echo $reg->region_code ?>" <?php echo ($reg->region_code == $brand->region_name)? 'Selected': ""?>><?php echo $reg->region_name ?></option>
                                     <?php endforeach; ?>
                                 </select>
-<!--                                <input type="text" name="brandname" required="required" class="form-control col-md-7 col-xs-12">-->
                             </div>
                         </div>
                         <div class="form-group">
@@ -69,27 +67,7 @@ include("../includes/header.php");?>
                             </label>
                             <div class="input-group col-md-6 col-sm-6 col-xs-12">
                                 <input type="number" class="form-control" name="standard_charges" placeholder="Please Enter Standard Charges" aria-describedby="basic-addon2" value="<?php echo $brand->standard_charges ?>">
-                                <span class="input-group-addon" id="basic-addon2"><?php
-//                                    if(isset($_POST['region_name'])){
-//                                        $region_names = $_POST['region_name'];
-//                                    }
-//                                    foreach($region as $reg):
-//                                        if ($region_names == $reg->region_code){
-//                                            echo  $reg->region_cur_symbol;
-//                                        }else{
-//                                            echo STORE_DEFAULT_CUR_SYMBOL;
-//                                        }
-//                                    endforeach;
-
-//                                    switch($region_names){
-//                                        case 'US': echo "USD"; break;
-//                                        case 'CA': echo "CAD"; break;
-//                                        case 'UK': echo "GBP"; break;
-//                                        default: echo STORE_DEFAULT_CUR_SYMBOL; break;
-//                                    }
-                                    echo STORE_DEFAULT_CUR_SYMBOL; ?>
-</span>
-
+                                <span class="input-group-addon" id="basic-addon2"><?php echo STORE_DEFAULT_CUR_SYMBOL; ?></span>
                             </div>
                             <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
                             <div class="input-group col-md-6 col-sm-6 col-xs-12">

@@ -27,19 +27,21 @@ include("../includes/header.php"); ?>
                                 <th>Phone</th>
                                 <th>Mobile</th>
                                 <th>Address</th>
+                                <th>Type</th>
+                                <th>Action</th>
 <!--                                <th>Actions</th>-->
                             </tr>
                             </thead>
-
-
                             <tbody>
                             <?php foreach ($customers as $customer): ?>
                                 <tr>
                                     <td><?php echo $customer->customer_id ?></td>
-                                    <td><?php echo $customer->first_name . $customer->last_name ?> </td>
+                                    <td><?php echo $customer->first_name . " " .$customer->last_name ?> </td>
                                     <td><?php echo $customer->email ?></td>
                                     <td><?php echo $customer->phone ?></td>
                                     <td><?php echo $customer->mobile ?></td>
+                                    <td><?php echo $customer->address ?></td>
+                                    <td><?php echo $customer->customer_type ?></td>
                                     <td><a href="view.php?customer=<?php echo $customer->customer_id ?>">View</a></td>
                                 </tr>
                             <?php endforeach; ?>

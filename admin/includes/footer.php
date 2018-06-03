@@ -24,6 +24,7 @@
 <script src="assets/js/jquery.dataTables.min.js"></script>
 <script src="assets/js/dataTables.bootstrap.min.js"></script>
 <script src="assets/js/dataTables.buttons.min.js"></script>
+<script src="assets/js//Chart.min.js"></script>
 <script src="assets/js/buttons.bootstrap.min.js"></script>
 <script src="assets/js/daterangepicker.js"></script>
 <script src="assets/js/buttons.flash.min.js"></script>
@@ -35,6 +36,9 @@
 <script src="assets/js/responsive.bootstrap.js"></script>
 <script src="assets/js/dataTables.scroller.min.js"></script>
 <script src="assets/js/jquery.inputmask.bundle.min.js"></script>
+<script src="assets/js/jquery.flot.orderBars.js"></script>
+<script src="assets/js/jquery.flot.spline.min.js"></script>
+<script src="assets/js/flot.curvedlines/curvedLines.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="assets/js/custom.js"></script>
 </body>

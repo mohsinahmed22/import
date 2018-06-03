@@ -47,6 +47,28 @@ class Shipping
         }
     }
 
+
+    /*
+    * Edit Shipping
+    */
+    public function update($data){
+        $this->db
+            ->query("UPDATE shipping SET 
+                           shipping_entity_cost = :shipping_entity_cost,
+                           shipping_entity_name = :shipping_entity_name 
+                           WHERE id = :id
+                   ");
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':shipping_entity_name', $data['shipping_entity_name']);
+        $this->db->bind(':shipping_entity_cost', $data['shipping_entity_cost']);
+
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     /*
      * Shipping Single
      */

@@ -17,6 +17,7 @@ include("../includes/header.php"); ?>
                         </h2>
                         <p><a href="add.php?users=addnew" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add User</a>
                         </p>
+                        <?php echo $msg;?>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -45,8 +46,8 @@ include("../includes/header.php"); ?>
                                     <td><?php echo $user->phone ?></td>
                                     <td><?php echo $user->role ?></td>
                                     <td><?php echo $user->is_active ?></td>
-                                    <td><a href="edit.php?brand=<?php echo $user->id ?>">Edit</a> | <a
-                                            href="delete.php?brand=<?php echo $user->id ?>">Delete</a></td>
+                                    <td><a href="edit.php?users=<?php echo $user->id ?>">Edit</a> | <a
+                                            href="users.php?delete=<?php echo $user->id ?>">Delete</a></td>
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>
