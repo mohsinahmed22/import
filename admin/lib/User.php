@@ -137,7 +137,7 @@ class User
 
     public function setUserData($row)
     {
-        $_SESSION['is_logged_in'] = true;
+        $this->is_logged_in = true;
         $_SESSION['user_id'] = $row->id;
         $_SESSION['admin_username'] = $row->username;
         $_SESSION['admin_first_name'] = $row->first_name;
@@ -150,13 +150,26 @@ class User
    * Check Login Status
    */
     public  function is_logged_in(){
-        if(isset($_SESSION['is_logged_in'])){
+        if($this->is_logged_in == true){
             return true;
         }else{
-
             return false;
         }
 
+    }
+
+
+    /*
+   * LogOut
+   */
+
+    public function logout()
+    {
+        $this->is_logged_in =  false;
+        unset($_SESSION['user_id']);
+        unset($_SESSION['admin_username']);
+        unset($_SESSION['admin_first_name']);
+        unset($_SESSION['admin_last_name']);
     }
 
     /*

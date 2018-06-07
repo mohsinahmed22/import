@@ -29,5 +29,4 @@ if (isset($_POST['login'])){
 
 }
 
-
 echo $template;

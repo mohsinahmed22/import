@@ -37,6 +37,14 @@ if(isset($_GET['brand'])){
     $shipping = new Shipping();
     $template->shipping =  $shipping->getShipping($_GET['shipping']);
 
+}elseif(isset($_GET['cdt'])){
+
+    $template = new Templates("templates/edit_customdutiestaxes.php");
+    $template->title = "Edit Custom Duties & Taxes";
+
+    $cdt = new CustomDutiesTaxes();
+    $template->cdt =  $cdt->getCustomDutiesTaxes($_GET['cdt']);
+
 }elseif(isset($_GET['region'])){
 
     $template = new Templates("templates/edit_region.php");
@@ -82,6 +90,19 @@ if (isset($_POST['edit_shipping'])){
 
     if($shipping->update($data)){
         header('Location: shipping.php?msg='.urlencode('Shipping Successfully Updated'));
+        exit();
+    }
+}
+if (isset($_POST['edit_customdutiestaxes'])){
+    $cdt = new CustomDutiesTaxes();
+    $data = array();
+
+    $data['id'] = $_POST['id'];
+    $data['name'] = $_POST['name'];
+    $data['charges'] = $_POST['charges'];
+
+    if($cdt->update($data)){
+        header('Location: customdutiestaxes.php?msg='.urlencode('Custom Duties & Taxes Successfully Updated'));
         exit();
     }
 }

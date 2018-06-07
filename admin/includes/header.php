@@ -7,10 +7,10 @@
  */
 ob_start();
 $user = new User();
-if(!$user->is_logged_in()){
-    header("Location: login.php");
-    exit();
-}
+//if(!$user->is_logged_in()){
+//    header("Location: login.php");
+//    exit();
+//}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,6 +69,7 @@ if(!$user->is_logged_in()){
                             <li><a href="brands.php"><i class="fa fa-users"></i> Brands <span class="fa fa-chevron-right"></span></a></li>
                             <li><a href="users.php"><i class="fa fa-home"></i> Users <span class="fa fa-chevron-right"></span></a></li>
                             <li><a href="shipping.php"><i class="fa fa-home"></i> Shipping <span class="fa fa-chevron-right"></span></a></li>
+                            <li><a href="customdutiestaxes.php"><i class="fa fa-home"></i> Custom Duties & Taxes <span class="fa fa-chevron-right"></span></a></li>
                             <li><a href="region.php"><i class="fa fa-home"></i>  Region / Currency<span class="fa fa-chevron-right"></span></a></li>
                             <li><a href="setting.php"><i class="fa fa-home"></i> Settings <span class="fa fa-chevron-right"></span></a></li>
 
