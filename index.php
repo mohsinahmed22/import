@@ -5,6 +5,8 @@ $region = new Region();
 $all_regions = $region->getAllRegion();
 $shipping = new Shipping();
 $all_shipping = $shipping->getAllShipping();
+$cdt = new CustomDutiesTaxes();
+$all_cdt = $cdt->getAllCustomDutiesTaxes();
 
 if(isset($_GET['success'])){
     $msg = "<div class=\"alert alert-success\">". $_GET['success'] ."</div>";
@@ -322,6 +324,27 @@ if(isset($_POST['placeorder'])) {
                                         ?>
                                     </ul>
                                     </p>
+                                    <small><strong>+ Custom Duties & Taxes:</strong></small>
+                                    <select class='form-control' name="cdt" id="cdt-charges" onchange="displayPrice()">
+                                        <?php foreach ($all_cdt as $cdt_item):?>
+                                            <option title="<?php echo $cdt_item->name ?>" value="<?php echo (($cdt_item->charges * ($total_product_amount + $total_shipping_amount))/100)?>" ><?php echo $cdt_item->name ?>(<?php echo $cdt_item->charges ?>%)</option>
+                                        <?php endforeach;?>
+                                    </select>
+                                    </p>
+                                    <p> <span id="cdt-name"></span>: <strong class="pull-right text-right"><?php echo STORE_DEFAULT_CUR_SYMBOL ?> <span id="cdt-text"></span></strong> </p>
+
+                                    <script  type="text/javascript">
+                                        function displayPrice() {
+                                            var selectBox = document.getElementById("cdt-charges");
+                                            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+                                            var selectedName = selectBox.options[selectBox.selectedIndex].title;
+                                            // alert(selectedValue);
+                                            document.getElementById('cdt-text').innerText = selectedValue.floating;
+                                            document.getElementById('cdt-name').innerText = selectedName;
+
+
+                                        }
+                                    </script>
 
                                     <hr>
                                     <p class="total">Total Bill:

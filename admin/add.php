@@ -26,6 +26,11 @@ if(isset($_GET['brands'])){
     $template = new Templates("templates/add_shipping.php");
     $template->title = "Add New Shipping";
 
+}elseif(isset($_GET['cdt'])){
+
+    $template = new Templates("templates/add_customdutiestaxes.php");
+    $template->title = "Add New Custom Duties and Taxes";
+
 }elseif(isset($_GET['region'])){
 
     $template = new Templates("templates/add_region.php");
@@ -84,6 +89,18 @@ if(isset($_POST['add_shipping'])){
 
     if($new_shipping->register($data)){
         header('Location: shipping.php?msg='.urlencode('Shipping Successfully Added'));
+        exit();
+    }
+}
+if(isset($_POST['add_customdutiestaxes'])){
+    $new_cdt = new CustomDutiesTaxes();
+    $data = array();
+
+    $data['name'] = $_POST['name'];
+    $data['charges'] = $_POST['charges'];
+
+    if($new_cdt->register($data)){
+        header('Location: customdutiestaxes.php?msg='.urlencode('Custom Duties & Taxes Successfully Added'));
         exit();
     }
 }
