@@ -84,13 +84,14 @@ class Order
     public function register($data){
         $this->db
             ->query("INSERT INTO request 
-                      (customer_id, request_total_amount, request_total_qty, request_total_shipping_amount, request_total_product_amount, request_date)
-                       VALUE (:customer_id, :request_total_amount , :request_total_qty, :request_total_shipping_amount, :request_total_product_amount, NOW())");
+                      (customer_id, request_total_amount, request_total_qty, request_total_shipping_amount, request_total_product_amount, request_duties_tax, request_date)
+                       VALUE (:customer_id, :request_total_amount , :request_total_qty, :request_total_shipping_amount, :request_total_product_amount, :request_duties_tax, NOW())");
         $this->db->bind(':customer_id', $data['customer_id']);
         $this->db->bind(':request_total_amount', $data['request_total_amount']);
         $this->db->bind(':request_total_qty', $data['request_total_qty']);
         $this->db->bind(':request_total_shipping_amount', $data['request_total_shipping_amount']);
         $this->db->bind(':request_total_product_amount', $data['request_total_product_amount']);
+        $this->db->bind(':request_duties_tax', $data['request_duties_tax']);
 //        $this->db->bind(':', $data['']);
         if($this->db->execute()){
             return true;

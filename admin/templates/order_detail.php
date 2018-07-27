@@ -126,10 +126,10 @@
                                             <th style="width:50%">Subtotal:</th>
                                             <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $order_detail->request_total_product_amount ;?></td>
                                         </tr>
-<!--                                        <tr>-->
-<!--                                            <th>Tax (9.3%)</th>-->
-<!--                                            <td>--><?php //echo STORE_DEFAULT_CUR_SYMBOL ?><!----><?php //?><!--</td>-->
-<!--                                        </tr>-->
+                                        <tr>
+                                            <th>Tax (<?php echo ($order_detail->request_total_shipping_amount + $order_detail->request_total_product_amount) * 100 / $order_detail->request_duties_tax?>)</th>
+                                            <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $order_detail->request_duties_tax?></td>
+                                        </tr>
                                         <tr>
                                             <th>Shipping:</th>
                                             <td><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php echo $order_detail->request_total_shipping_amount ;?></td>

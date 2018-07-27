@@ -9,14 +9,14 @@ include_once 'admin/core/init.php';
 $tax = new CustomDutiesTaxes();
 $taxes = $tax->getAllCustomDutiesTaxes();
 $tax_charge= 0;
-isset($_SESSION['req_item_subtotal']) ? $total_product_amount = number_format(array_sum($_SESSION['req_item_subtotal']),2) : "0.00";
+isset($_SESSION['req_item_subtotal']) ? $total_product_amount = array_sum($_SESSION['req_item_subtotal']) : "0.00";
 isset($_SESSION['req_item_shipping_subtotal']) ? $total_shipping_amount = array_sum($_SESSION['req_item_shipping_subtotal']) : "0.00";
 
 if(isset($_GET['cdt'])){
     foreach($taxes as $t):
         if($t->name == $_GET['cdt']){
-            $taxCharge = $t->charges * ($total_product_amount + $total_shipping_amount);
-            echo $_GET['name']?>: <strong class="pull-right text-right"><?php echo STORE_DEFAULT_CUR_SYMBOL ?> <?php echo number_format( $taxCharge,2) ?></span></strong>
+            $taxCharge = number_format((($total_product_amount + $total_shipping_amount))/ $t->charges,2);
+            echo $_GET['name']?>: <strong class="pull-right text-right"><?php echo STORE_DEFAULT_CUR_SYMBOL ?> <?php echo  $taxCharge ?></span></strong>
             <hr>
             <p class="total">Total Bill:
                 <strong class="pull-right text-right"><?php echo STORE_DEFAULT_CUR_SYMBOL ?><?php
@@ -26,7 +26,6 @@ if(isset($_GET['cdt'])){
                             + array_sum($_SESSION['req_item_shipping_subtotal'])
                             + array_sum($_SESSION['standard_charges']))
                             + $taxCharge;
-
                         $total_bill = $calculate ;
                         echo $total_bill ;
                     else:
