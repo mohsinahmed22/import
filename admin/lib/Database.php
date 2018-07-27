@@ -17,6 +17,9 @@ class Database
     private $dbh;
     private $error;
 
+    /**
+     * Database constructor.
+     */
     public function __construct()
     {
         // Set DSN
@@ -36,10 +39,20 @@ class Database
 
     }
 
+    /**
+     * Datebase Query
+     * @param $query
+     */
     public function query($query){
         $this->stmt = $this->dbh->prepare($query);
     }
 
+    /**
+     * Parameter Query Bind
+     * @param $param
+     * @param $value
+     * @param null $type
+     */
     public function bind($param, $value, $type = null){
         if (is_null($type)){
             switch (true){
@@ -56,30 +69,55 @@ class Database
         $this->stmt->bindValue($param, $value, $type);
     }
 
+    /**
+     * Execute Query
+     * @return mixed
+     */
     public function execute(){
         return $this->stmt->execute();
     }
 
+    /**
+     * Execute Query Convert in Object
+     * @return Array
+     */
     public function resultset(){
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
+    /**
+     * Single Row
+     * @return Single Row
+     */
     public function single(){
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
 
     }
+
+    /**
+     * Calculate Column from Database
+     * @return mixed
+     */
     public function sum(){
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_COLUMN);
 
     }
 
+    /**
+     * Row Count in Database Table
+     * @return mixed
+     */
     public function rowCount(){
         return $this->stmt->rowCount();
     }
 
+    /**
+     * Last Inserted Id
+     * @return string
+     */
     public function last_insert_id(){
         return $this->dbh->lastInsertId();
     }

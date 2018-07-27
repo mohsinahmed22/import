@@ -8,18 +8,24 @@
  */
 class Shipping
 {
-    // Initializing DB
+    /**
+     * @var Database
+     */
     private $db;
 
+    /**
+     * Shipping constructor.
+     */
     public function __construct()
     {
         $this->db = new Database();
     }
 
 
-    /*
-    * Select All Shipping Methods
-    */
+    /**
+     * Select All Shipping
+     * @return mixed
+     */
     public function getAllShipping(){
         $query = "SELECT * FROM shipping ";
         $this->db->query($query);
@@ -28,9 +34,11 @@ class Shipping
         return $result;
     }
 
-    /*
-    * Add New Shipping Method
-    */
+    /**
+     * Add New Shipping
+     * @param $data
+     * @return bool
+     */
     public function register($data){
         $this->db
             ->query("INSERT INTO shipping
@@ -48,9 +56,11 @@ class Shipping
     }
 
 
-    /*
-    * Edit Shipping
-    */
+    /**
+     * Update Shipping
+     * @param $data
+     * @return bool
+     */
     public function update($data){
         $this->db
             ->query("UPDATE shipping SET 
@@ -81,10 +91,11 @@ class Shipping
        return $result;
     }
 
-    /*
-    * Delete Shipping
-    */
-
+    /**
+     * Delete Shipping
+     * @param $id
+     * @return bool
+     */
     public function deleteShipping($id){
         $this->db->query("DELETE FROM shipping WHERE id = :id ");
         $this->db->bind(":id", $id);

@@ -8,18 +8,24 @@
  */
 class CustomDutiesTaxes
 {
-    // Initializing DB
+    /**
+     * @var Database
+     */
     private $db;
 
+    /**
+     * CustomDutiesTaxes constructor.
+     */
     public function __construct()
     {
         $this->db = new Database();
     }
 
 
-    /*
-    * Select All Local Shipping Methods
-    */
+    /**
+     * Select All Local Shipping Methods
+     * @return array
+     */
     public function getAllCustomDutiesTaxes(){
         $query = "SELECT * FROM custom_duties_taxes ";
         $this->db->query($query);
@@ -28,9 +34,11 @@ class CustomDutiesTaxes
         return $result;
     }
 
-    /*
-    * Add New Local Shipping Method
-    */
+    /**
+     * Add New Local Shipping Method
+     * @param $data
+     * @return bool
+     */
     public function register($data){
         $this->db
             ->query("INSERT INTO custom_duties_taxes
@@ -48,9 +56,12 @@ class CustomDutiesTaxes
     }
 
 
-    /*
-    * Edit Local Shipping
-    */
+    /**
+     * Edit Local Shipping
+     * @param $data
+     * @return bool
+     */
+
     public function update($data){
         $this->db
             ->query("UPDATE custom_duties_taxes SET 
@@ -69,8 +80,10 @@ class CustomDutiesTaxes
         }
     }
 
-    /*
+    /**
      * Local Shipping Single
+     * @param $id
+     * @return Single
      */
     public function getCustomDutiesTaxes($id){
         $this->db->query("SELECT * FROM custom_duties_taxes where id = :id");
@@ -81,9 +94,11 @@ class CustomDutiesTaxes
        return $result;
     }
 
-    /*
-    * Delete Local Shipping
-    */
+    /**
+     * Delete Local Shipping
+     * @param $id
+     * @return bool
+     */
 
     public function deleteCustomDutiesTaxes($id){
         $this->db->query("DELETE FROM custom_duties_taxes WHERE id = :id ");

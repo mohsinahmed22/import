@@ -8,17 +8,25 @@
  */
 class Region
 {
+
+    /**
+     * @var Database
+     */
     public $db;
 
+    /**
+     * Region constructor.
+     */
     public function __construct()
     {
         $this->db = new Database();
     }
 
 
-    /*
-    * Select All Regions
-    */
+    /**
+     * Select All Region
+     * @return mixed
+     */
     public function getAllRegion(){
         $this->db->query("SELECT * FROM region");
         $this->db->execute();
@@ -30,9 +38,11 @@ class Region
     }
 
 
-    /*
-   * Select Region by id
-   */
+    /**
+     * Select Region by Id
+     * @param $id
+     * @return mixed
+     */
     public function getRegion($id){
         $this->db->query("SELECT * FROM region where id = :id");
         $this->db->bind(':id', $id);
@@ -42,9 +52,11 @@ class Region
     }
 
 
-    /*
-    * Add Region
-    */
+    /**
+     * Add new Region
+     * @param $data
+     * @return bool
+     */
     public function register($data){
         $this->db->query("
                     INSERT INTO region (region_name, region_code, region_cur, region_cur_symbol)
@@ -60,9 +72,13 @@ class Region
         }
 
     }
-    /*
-   * Update Region
-   */
+
+
+    /**
+     * Update New Region
+     * @param $data
+     * @return bool
+     */
     public function update($data){
         $this->db->query("
                     UPDATE region SET 
@@ -85,9 +101,11 @@ class Region
     }
 
 
-    /*
-    * Delete Shipping
-    */
+    /**
+     * Delete Region
+     * @param $id
+     * @return bool
+     */
     public function deleteRegion($id){
         $this->db->query("DELETE FROM region WHERE id = :id ");
         $this->db->bind(":id", $id);

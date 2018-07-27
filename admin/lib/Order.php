@@ -8,18 +8,24 @@
  */
 class Order
 {
-    // Initializing DB
+    /**
+     * @var Database
+     */
     private $db;
 
+    /**
+     * Order constructor.
+     */
     public function __construct()
     {
         $this->db = new Database();
     }
 
 
-    /*
-    * Get All Orders
-    */
+    /**
+     * Get All Order
+     * @return mixed
+     */
     public function getAllOrders(){
         $query = "SELECT * FROM request ";
         $this->db->query($query);
@@ -28,9 +34,11 @@ class Order
         return $result;
     }
 
-    /*
-   * Get All Orders
-   */
+    /**
+     * Get All Customer Order
+     * @param $customer_id
+     * @return mixed
+     */
     public function getAllCustomerOrders($customer_id){
         $query = "SELECT * FROM request where customer_id = :customer_id";
         $this->db->query($query);
@@ -40,8 +48,9 @@ class Order
         return $result;
     }
 
-    /*
-     * Get Latest Orders
+    /**
+     * Get Latest  Order
+     * @return mixed
      */
     public function getlatestOrders(){
         $query = "SELECT * FROM request ORDER BY id DESC LIMIT 5";
@@ -53,9 +62,11 @@ class Order
     }
 
 
-    /*
-    * Get Order Detail
-    */
+    /**
+     * Get Order Details
+     * @param $id
+     * @return mixed
+     */
     public function getOrderDetail($id){
         $this->db->query("SELECT * FROM request WHERE id = :id");
         $this->db->bind(":id", $id);
@@ -65,9 +76,11 @@ class Order
     }
 
 
-    /*
-    * Add Orders
-    */
+    /**
+     * Add New Order
+     * @param $data
+     * @return bool
+     */
     public function register($data){
         $this->db
             ->query("INSERT INTO request 
@@ -86,9 +99,11 @@ class Order
         }
     }
 
-    /*
-    * Get Last Inserted Id
-    */
+
+    /**
+     * Get Id of Last Inserted Order
+     * @return string
+     */
     public function last_request_insert_id(){
         return $this->db->last_insert_id();
     }

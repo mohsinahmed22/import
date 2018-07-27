@@ -6,14 +6,7 @@
  * Time: 12:20 PM
  */
 ?>
-<!-- footer content -->
-<!--<footer>-->
-<!--    <div class="pull-right">-->
-<!--<!--        ImportHub.pk by Designed By <a href="www.tracertgroup.com">Tracert Group Inc.</a>-->-->
-<!--    </div>-->
-<!--    <div class="clearfix"></div>-->
-<!--</footer>-->
-<!-- /footer content -->
+
 </div>
 </div>
 

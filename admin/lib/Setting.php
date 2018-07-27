@@ -9,13 +9,23 @@
 class Setting
 {
 
+    /**
+     * @var Database
+     */
     private $db;
 
+    /**
+     * Setting constructor.
+     */
     public function __construct()
     {
         $this->db = new Database();
     }
 
+    /**
+     * Get All Settings
+     * @return mixed
+     */
     public function getAllSettings(){
         $this->db->query("SELECT * FROM settings");
         $this->db->execute();
@@ -25,7 +35,11 @@ class Setting
         return $results;
     }
 
-
+    /**
+     * Assign Settings
+     * @param $data
+     * @return array
+     */
     public function AssignSetting($data){
         $DataArray = array();
         foreach ($data as $v){

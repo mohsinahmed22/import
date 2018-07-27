@@ -142,28 +142,38 @@ class Brands
 
 
 
+
     /*
     * Select Brand via Region
     */
 
-    public function SelectBrandsRegion($region_code){
-        $this->db->query("SELECT brandname, url FROM brands where region_name = :region_name");
-        $this->db->bind(':region_name', $region_code);
-
-        if($result = $this->db->resultset()){
-            return $result;
-        }else{
-            return false;
-        }
-
-
+    public function SelectBrandsRegion(){
+        $this->db->query("SELECT * FROM brands inner join region on brands.region_name = region.region_code ");
+        $results = $this->db->resultset();
+        $results = $this->create_region_brands($results);
+//        print_r($results);
+        return $results;
     }
 
-    public function displayBrandbyregions($regions){
-        $brands_by_region = array();
-        print_r($regions);
-        //return $brands_by_region;
+
+    public function create_region_brands($results){
+        $regBrands = array();
+        if($results):
+
+            foreach ($results as $brand){
+                if (!array_key_exists($brand->region_name,$regBrands)):
+                    $regBrands[$brand->region_name] = array();
+                    array_push($regBrands[$brand->region_name],$brand);
+                else:
+                    array_push($regBrands[$brand->region_name],$brand);
+                endif;
+            }
+        endif;
+//        print_r($regBrands);
+        return $regBrands;
     }
+
+
 
     /*
     * Delete Brand

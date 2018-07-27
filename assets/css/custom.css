@@ -984,6 +984,20 @@ footer {
     margin: 3px 0 7px;
     font-weight: bold
 }
+.ordering_list li {margin-bottom:20px;}
+.brand-img-link img{margin-bottom:20px;}
+a.brand-img-link {color:black; font-size:16px; }
+.cart-list li, .info-form {
+    background: #fff;
+    padding: 5%;
+    border: 1px solid #ccc;
+}
+.cart-list li {
+    margin-bottom: 10px;}
+.login_wrapper {
+    max-width: 100%;
+}
+
 article.media {
     width: 100%
 }

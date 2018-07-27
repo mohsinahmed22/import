@@ -42,3 +42,29 @@ function append_to_session_array($var_name)
         $_SESSION[$var_name] = array($_POST[$var_name]);
     }
 }
+
+
+function cart_session_remove(){
+    unset($_SESSION['brandname'][$_POST['brand_id_remove']]);
+    unset($_SESSION['req_item_color'][$_POST['brand_id_remove']]);
+    unset($_SESSION['req_item_price'][$_POST['brand_id_remove']]);
+    unset($_SESSION['req_item_qty'][$_POST['brand_id_remove']]);
+    unset($_SESSION['req_item_url'][$_POST['brand_id_remove']]);
+    unset($_SESSION['req_item_subtotal'][$_POST['brand_id_remove']]);
+    unset($_SESSION['req_item_shipping_subtotal'][$_POST['brand_id_remove']]);
+    unset($_SESSION['req_item_description'][$_POST['brand_id_remove']]);
+    unset($_SESSION['req_item_id'][$_POST['brand_id_remove']]);
+    unset($_SESSION['vat_charges'][$_POST['brand_id_remove']]);
+    unset($_SESSION['standard_charges'][$_POST['brand_id_remove']]);
+    unset($_SESSION['region_name'][$_POST['brand_id_remove']]);
+    unset($_SESSION['shipping_entity_cost'][$_POST['brand_id_remove']]);
+    unset($_SESSION['shipping_entity_name'][$_POST['brand_id_remove']]);
+    header("Location: index-main.php");
+    exit();
+}
+
+
+function redirect($location){
+    header("Location: ". $location);
+    exit();
+}

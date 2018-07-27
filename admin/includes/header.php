@@ -6,11 +6,6 @@
  * Time: 12:19 PM
  */
 ob_start();
-$user = new User();
-//if(!$user->is_logged_in()){
-//    header("Location: login.php");
-//    exit();
-//}
 ?>
 <!DOCTYPE html>
 <html lang="en">

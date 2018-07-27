@@ -8,15 +8,24 @@
  */
 class Customer extends user
 {
-    // Initializing DB
+    /**
+     * @var Database
+     */
     private $db;
 
+    /**
+     * Customer constructor.
+     */
     public function __construct()
     {
         $this->db = new Database();
     }
 
 
+    /**
+     * Select All Custoemrs
+     * @return mixed
+     */
     public function getAllCustomers(){
         $query = "SELECT * FROM customers ";
         $this->db->query($query);
@@ -25,6 +34,11 @@ class Customer extends user
         return $result;
     }
 
+    /**
+     * Get Customer
+     * @param $id
+     * @return mixed
+     */
     public function getCustomer($id){
         $this->db->query("SELECT * FROM customers WHERE customer_id = :customer_id");
         $this->db->bind(":customer_id", $id);
@@ -33,8 +47,9 @@ class Customer extends user
         return $result;
     }
 
-    /*
-     * Get Latest Orders
+    /**
+     * Get Latest Customer
+     * @return mixed
      */
     public function getlatestCustomers(){
         $query = "SELECT * FROM customers ORDER BY customer_id DESC LIMIT 5 ";
@@ -44,6 +59,11 @@ class Customer extends user
         return $result;
     }
 
+    /**
+     * Register Customer
+     * @param $data
+     * @return bool
+     */
     public function register($data){
         $this->db
             ->query("INSERT INTO customers 
@@ -67,7 +87,10 @@ class Customer extends user
     }
 
 
-
+    /**
+     * Sending Last Create Customer Id
+     * @return string
+     */
     public function last_customer_insert_id(){
         return $this->db->last_insert_id();
     }

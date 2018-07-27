@@ -7,5 +7,7 @@
  */
 ob_start();
 require_once ('core/init.php');
-User::$is_logged_in = false;
+$user = new User();
+if($user->logout()){redirect('login.php');};
+
 

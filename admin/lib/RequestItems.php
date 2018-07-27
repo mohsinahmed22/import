@@ -8,15 +8,24 @@
  */
 class RequestItems
 {
-    // Initializing DB
+    /**
+     * @var Database
+     */
     private $db;
 
+    /**
+     * RequestItems constructor.
+     */
     public function __construct()
     {
         $this->db = new Database();
     }
 
 
+    /**
+     * Get All Requested Items
+     * @return mixed
+     */
     public function getAllRequestItems(){
         $query = "SELECT * FROM requested_items ";
         $this->db->query($query);
@@ -25,7 +34,11 @@ class RequestItems
         return $result;
     }
 
-
+    /**
+     * Get Items in Order by id
+     * @param $id
+     * @return mixed
+     */
     public function getOrderitems($id){
         $this->db->query("SELECT * FROM requested_items WHERE request_id = :id");
         $this->db->bind(":id", $id);
@@ -34,7 +47,10 @@ class RequestItems
         return $result;
     }
 
-
+    /**
+     * Get Brands Order Count
+     * @return array
+     */
     public function getBrandsOrderCount(){
         $query = "SELECT brandname FROM requested_items ";
         $this->db->query($query);
@@ -54,7 +70,11 @@ class RequestItems
         return $arr;
     }
 
-
+    /**
+     * Add new Requested Items
+     * @param $data
+     * @return bool
+     */
     public function register($data){
         $this->db
             ->query("INSERT INTO requested_items 
@@ -82,6 +102,12 @@ class RequestItems
             return false;
         }
     }
+
+
+    /**
+     * Get Id of last inserted Requested Item
+     * @return string
+     */
     public function last_request_insert_id(){
         return $this->db->last_insert_id();
     }

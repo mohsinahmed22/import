@@ -21,8 +21,7 @@ if (isset($_POST['login'])){
     $user = new User();
 
     if($user->login($username, $password)){
-        header("Location: index.php");
-        exit();
+        redirect('index.php');
     }else{
         $template->msg = "<div class='col-sm-12 alert alert-danger'>Invalid Login</div>";
     }

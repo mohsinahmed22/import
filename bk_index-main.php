@@ -1,5 +1,4 @@
-<?php include("includes/header.php");
-include("admin/core/init.php"); ?>
+<?php include("includes/header.php"); ?>
 <?php $brands = new Brands();
 $all_brands = $brands->getAllBrands();
 $region = new Region();
@@ -46,7 +45,7 @@ if (isset($_POST['submit'])) {
 // Creating Url
 
     $req_url = parse_url($_POST['req_item_url']);
-    $req_url = $req_url['scheme'] . "://" . $req_url['host'] . $req_url['path'];
+    $req_url = $req_url['scheme'] . "://" . $req_url['host'];
     echo $req_url;
 
 // Brand
@@ -109,8 +108,8 @@ if (isset($_POST['submit'])) {
 
 
     } else {
-//        header("Location: index.php?error=" . urlencode("Invalid Url"));
-//        exit();
+        header("Location: index.php?error=" . urlencode("Invalid Url"));
+        exit();
     }
 }
 if(isset($_POST['placeorder'])) {
@@ -341,6 +340,7 @@ if(isset($_POST['placeorder'])) {
                                     </select>
                                     </p>
                                     <p id="cdt-display">  </p>
+
                                     <script  type="text/javascript">
                                         var selectBox = document.getElementById("cdt-charges");
                                         var selectedValue = selectBox.options[selectBox.selectedIndex].value;
