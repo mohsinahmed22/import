@@ -1,4 +1,4 @@
-<?php session_start();
+    <?php session_start();
 
 //Paths
 require_once (dirname(__DIR__).'/config/config.php');

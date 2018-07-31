@@ -15,24 +15,20 @@
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="assets/images/1-1.png" alt="ImportHub.pk">
-                <div class="carousel-caption">
-                    ...
+
+            <?php
+            $count = 0;
+            foreach ($allSlides as $slide): ?>
+                <div class="item <?php echo ($count == 0) ? 'active ': ''; $count++ ?>">
+                    <img src="assets/images/sliders/<?php echo $slide->img_path ?>" alt="<?php echo $slide->img_title?>">
+                    <div class="carousel-caption"></div>
                 </div>
-            </div>
-            <div class="item">
-                <img src="assets/images/2-1.png" alt="...">
-                <div class="carousel-caption">
-                    ...
-                </div>
-            </div>
-            ...
+            <?php endforeach; ?>
+
         </div>
 
         <!-- Controls -->
@@ -45,28 +41,13 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
     <br/>
     <br/>
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2>Please Read Before Asking Question</h2>
-                <ul>
-                    <li>Taking orders for END OF JULY delivery batch</li>
-                    <li>You browse brand’s UK website. We purchase in UK, import it in Pakistan & deliver it to you</li>
-                    <li>Checkout reviews by existing customers  www.facebook.com/importhub/reviews</li>
-                    <li>For questions, ONLY email us at hello@importhub.pk & someone from CS will reply within 24hrs</li>
-                    <li>To order other brands from UK (other than brands shown below). Select ‘ANY OTHER BRAND‘ in order form dropdown menu and fill details. We don’t import electronics & perfumes</li>
-                    <li>To calculate bill: Watch video & fill ‘Order Form’ below</li>
-                </ul>
-                <hr />
-                <h2>3-Steps Import Booking Process to Calculate Bill</h2>
-                <ol>
-                    <li>Click any brand logo below to visit Brand’s website. Select UK Region (if asked)</li>
-                    <li>COPY website link of any product from brand’s website</li>
-                    <li>Come back here at our Order Form below, PASTE website link with details to calculate bill & place booking!</li>
-                </ol>
-                <strong>Tip: For most brands, when you add multiple products from one brand then Brand Delivery Fee is waved off!</strong>
+                <?php echo $assginSetting->store_instruction ?>
             </div>
         </div>
         <br/>
@@ -88,9 +69,9 @@
         <div class="row">
             <div class="col-sm-8 ordering_list">
                 <h2>Ordering Form (ImportHub.pk)</h2>
-                <form action="index-main.php" method="post">
+                <form action="index.php" method="post">
                     <div class="form-group">
-                        <input type="url" name="req_item_url" class="form-control col-md-12" placeholder="Enter Brand Url">
+                        <input type="url" name="req_item_url" class="form-control col-md-12" placeholder="Enter Brand Url" required>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
@@ -119,13 +100,13 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-2"><input type="number" name="req_item_qty" class="form-control col-md-12"
-                                                     placeholder="Qty"></div>
+                                                     placeholder="Qty" value="1" required></div>
                         <div class="col-sm-2"><input type="text" name="req_item_color" class="form-control  col-md-12"
                                                      placeholder="Color"></div>
                         <div class="col-sm-2"><input type="text" name="req_item_size" class="form-control col-sm-12"
                                                      placeholder="Size"></div>
                         <div class="col-sm-6 price-curr"><input type="text" name="req_item_price" class="form-control col-sm-8"
-                                                                placeholder="Price">
+                                                                placeholder="Price" required>
                             <select class="form-control col-sm-4" name="currency">
                                 <?php  foreach($all_regions as $reg):?>
                                     <option value="<?php echo $reg->currency_exchange_rate ?>"><?php  echo $reg->region_cur?> (<?php echo $reg->region_cur_symbol ?>)</option>
@@ -140,8 +121,8 @@
                     <hr>
                     <div class="col-sm-12">
                         <input type="hidden" name="req_item_id" class="form-control col-md-7 col-xs-12" value="0">
-                        <button type="submit" name="submit" class="btn btn-success">Add To Cart</button>
-                        <button class="btn btn-default submit" type="submit" name="reset">Reset</button>
+                        <button type="submit" name="submit" class="btn btn-success  btn-lg ">Add To Cart</button>
+                        <button class="btn btn-default btn-lg  submit" type="submit" name="reset">Reset</button>
                     </div>
 
                     <div class="clearfix"></div>
@@ -190,7 +171,7 @@
                         <h3>Checkout</h3>
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <input type="text" name="first_name" class="form-control col-md-6" placeholder="First Name">
+                                <input type="text" name="first_name" class="form-control col-md-6" placeholder="First Name" required>
                             </div>
                             <div class="form-group col-sm-6">
                                 <input type="text" name="last_name" class="form-control col-md-12" placeholder="Last Name">
@@ -198,18 +179,18 @@
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <input type="email" name="email" class="form-control col-md-12" placeholder="Email">
+                                <input type="email" name="email" class="form-control col-md-12" placeholder="Email" required>
                             </div>
                             <div class="form-group hide">
-                                <input type="text" name="phone" class="form-control col-md-12" placeholder="Phone Number">
+                                <input type="text" name="phone" class="form-control col-md-12" placeholder="Phone Number" >
                             </div>
                             <div class="form-group col-sm-6">
-                                <input type="text" name="mobile" class="form-control col-md-12" placeholder="Mobile Number">
+                                <input type="text" name="mobile" class="form-control col-md-12" placeholder="Mobile Number" required>
                             </div>
 
                         </div>
                         <div class="form-group">
-                            <input type="text" name="address" class="form-control col-md-12" placeholder="Address">
+                            <input type="text" name="address" class="form-control col-md-12" placeholder="Address" required>
                         </div>
 
                         <div class="clearfix"></div>

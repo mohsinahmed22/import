@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e006641-d2c3-4b8e-a0b2-96d51efda8c1" name="Default" comment="major update">
-      <change afterPath="$PROJECT_DIR$/admin/customdutiestaxes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/lib/CustomDutiesTaxes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/templates/add_customdutiestaxes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/templates/allcustomdutiestaxes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/templates/edit_customdutiestaxes.php" afterDir="false" />
+    <list default="true" id="4e006641-d2c3-4b8e-a0b2-96d51efda8c1" name="Default" comment="Updated">
+      <change afterPath="$PROJECT_DIR$/.idea/cake_config_setting_v0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/lib/Payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/templates/add_slide.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/templates/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/sliders/1-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/sliders/2-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importhub_form_db_bk10june2018.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/thankyou.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thank-you.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/config/systems.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/systems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/core/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/core/init.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/lib/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/helpers/system_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/helpers/system_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/lib/Region.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/Region.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/lib/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/Setting.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/setting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/templates/add_region.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/add_region.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/templates/allsettings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/allsettings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/templates/edit_region.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/edit_region.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calc.php" beforeDir="false" afterPath="$PROJECT_DIR$/calc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontpage.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,14 +72,14 @@
         <item name="MySQL - importhub_form_db@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="importhub_form_db: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="custom_duties_taxes: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="settings: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="MySQL - importhub_form_db@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="importhub_form_db: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="shipping: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="sliders: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -80,98 +93,7 @@
     <favorites_list name="import" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="add.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="96" column="35" lean-forward="true" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="341" column="114" selection-start-line="341" selection-start-column="114" selection-end-line="341" selection-end-column="114" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_customdutiestaxes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/templates/add_customdutiestaxes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allcustomdutiestaxes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/templates/allcustomdutiestaxes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="39" column="69" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom_duties_taxes" pinned="false" current-in-tab="false">
-        <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/custom_duties_taxes">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_customdutiestaxes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/templates/edit_customdutiestaxes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomDutiesTaxes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/lib/CustomDutiesTaxes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-138">
-              <caret line="35" column="52" lean-forward="true" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_brand.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/templates/add_brand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="129" column="34" lean-forward="true" selection-start-line="125" selection-start-column="28" selection-end-line="129" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/includes/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="71" column="112" selection-start-line="71" selection-start-column="112" selection-end-line="71" selection-end-column="112" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -182,6 +104,12 @@
       <find>$shipping</find>
       <find>localshipping_entity_name</find>
       <find>$ship</find>
+      <find>index.php</find>
+      <find>user</find>
+      <find>placeorder</find>
+      <find>$total_shipping_amount</find>
+      <find>request_total_product_amount</find>
+      <find>general</find>
     </findStrings>
     <replaceStrings>
       <replace>index.php</replace>
@@ -189,6 +117,7 @@
       <replace>charges</replace>
       <replace>name</replace>
       <replace>$item</replace>
+      <replace>index-main.php</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -202,33 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/admin/config/systems.php" />
-        <option value="$PROJECT_DIR$/admin/templates/allsettings.php" />
-        <option value="$PROJECT_DIR$/admin/templates/add_region.php" />
-        <option value="$PROJECT_DIR$/admin/templates/add_brand.php" />
-        <option value="$PROJECT_DIR$/admin/lib/RequestItems.php" />
-        <option value="$PROJECT_DIR$/admin/templates/order_detail.php" />
-        <option value="$PROJECT_DIR$/assets/css/custom.css" />
-        <option value="$PROJECT_DIR$/netyou-curry-currency-ddm-0a2d56de2873/demo/index.html" />
-        <option value="$PROJECT_DIR$/cur/demo/index.html" />
-        <option value="$PROJECT_DIR$/config.php" />
-        <option value="$PROJECT_DIR$/includes/header.php" />
-        <option value="$PROJECT_DIR$/admin/core/init.php" />
-        <option value="$PROJECT_DIR$/t.php" />
-        <option value="$PROJECT_DIR$/admin/lib/Session.php" />
-        <option value="$PROJECT_DIR$/admin/templates/login.php" />
-        <option value="$PROJECT_DIR$/admin/includes/footer.php" />
-        <option value="$PROJECT_DIR$/admin/templates/allbrands.php" />
-        <option value="$PROJECT_DIR$/admin/lib/Brands.php" />
-        <option value="$PROJECT_DIR$/admin/brands.php" />
-        <option value="$PROJECT_DIR$/admin/lib/Shipping.php" />
-        <option value="$PROJECT_DIR$/admin/shipping.php" />
-        <option value="$PROJECT_DIR$/admin/templates/allshipping.php" />
-        <option value="$PROJECT_DIR$/admin/lib/Region.php" />
-        <option value="$PROJECT_DIR$/admin/lib/Order.php" />
-        <option value="$PROJECT_DIR$/admin/region.php" />
-        <option value="$PROJECT_DIR$/admin/templates/allregion.php" />
-        <option value="$PROJECT_DIR$/admin/templates/allrequests.php" />
         <option value="$PROJECT_DIR$/admin/templates/allcustomers.php" />
         <option value="$PROJECT_DIR$/admin/templates/allusers.php" />
         <option value="$PROJECT_DIR$/admin/templates/edit_brand.php" />
@@ -236,23 +138,50 @@
         <option value="$PROJECT_DIR$/admin/templates/dashboard.php" />
         <option value="$PROJECT_DIR$/admin/config/config.php" />
         <option value="$PROJECT_DIR$/admin/templates/logout.php" />
-        <option value="$PROJECT_DIR$/admin/login.php" />
-        <option value="$PROJECT_DIR$/admin/logout.php" />
-        <option value="$PROJECT_DIR$/admin/lib/User.php" />
         <option value="$PROJECT_DIR$/admin/templates/alllocalshipping.php" />
         <option value="2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/localshipping.sql" />
         <option value="$PROJECT_DIR$/admin/lib/LocalShipping.php" />
         <option value="$PROJECT_DIR$/admin/templates/add_localshipping.php" />
         <option value="$PROJECT_DIR$/admin/localshipping.php" />
         <option value="$PROJECT_DIR$/admin/templates/edit_localshipping.php" />
-        <option value="$PROJECT_DIR$/admin/lib/CustomDutiesTaxes.php" />
         <option value="$PROJECT_DIR$/admin/templates/edit_customdutiestaxes.php" />
         <option value="$PROJECT_DIR$/admin/templates/add_customdutiestaxes.php" />
-        <option value="$PROJECT_DIR$/admin/includes/header.php" />
         <option value="$PROJECT_DIR$/admin/edit.php" />
-        <option value="$PROJECT_DIR$/admin/add.php" />
         <option value="$PROJECT_DIR$/admin/templates/allcustomdutiestaxes.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/index._main.php" />
+        <option value="$PROJECT_DIR$/includes/footer.php" />
+        <option value="$PROJECT_DIR$/includes/header.php" />
+        <option value="$PROJECT_DIR$/assets/css/custom.css" />
+        <option value="$PROJECT_DIR$/admin/lib/Brands.php" />
+        <option value="$PROJECT_DIR$/admin/helpers/system_helper.php" />
+        <option value="$PROJECT_DIR$/admin/includes/header.php" />
+        <option value="$PROJECT_DIR$/admin/index.php" />
+        <option value="$PROJECT_DIR$/admin/logout.php" />
+        <option value="$PROJECT_DIR$/admin/login.php" />
+        <option value="$PROJECT_DIR$/admin/lib/User.php" />
+        <option value="$PROJECT_DIR$/admin/lib/Customer.php" />
+        <option value="$PROJECT_DIR$/admin/lib/Region.php" />
+        <option value="$PROJECT_DIR$/admin/lib/RequestItems.php" />
+        <option value="$PROJECT_DIR$/admin/lib/Shipping.php" />
+        <option value="$PROJECT_DIR$/admin/lib/Templates.php" />
+        <option value="$PROJECT_DIR$/admin/lib/Database.php" />
+        <option value="$PROJECT_DIR$/admin/lib/CustomDutiesTaxes.php" />
+        <option value="$PROJECT_DIR$/index-main.php" />
+        <option value="$PROJECT_DIR$/admin/templates/order_detail.php" />
+        <option value="$PROJECT_DIR$/admin/lib/Order.php" />
+        <option value="$PROJECT_DIR$/calc.php" />
+        <option value="$PROJECT_DIR$/admin/core/init.php" />
+        <option value="&lt;e98b2d20-7051-4e60-84f8-b0286fb3f7e4&gt;/admin/config/config.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2eb31811-5e56-4d1c-924a-a1f64216e6e4/console.sql" />
+        <option value="$PROJECT_DIR$/admin/add.php" />
+        <option value="$PROJECT_DIR$/admin/templates/add_slide.php" />
+        <option value="$PROJECT_DIR$/admin/templates/allsettings.php" />
+        <option value="$PROJECT_DIR$/admin/lib/Setting.php" />
+        <option value="$PROJECT_DIR$/admin/setting.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/templates/frontpage.php" />
+        <option value="$PROJECT_DIR$/admin/config/systems.php" />
       </list>
     </option>
   </component>
@@ -275,6 +204,30 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$PROJECT_DIR$/admin/assets/vendors/Chart.js/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/DateJS/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/Flot/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/animate.css/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/autosize/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/bootstrap-daterangepicker/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/bootstrap-progressbar/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/bootstrap-wysiwyg/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/cropper/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/devbridge-autocomplete/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/echarts/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/eve/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/flot-spline/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/ion.rangeSlider/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/jquery-knob/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/jquery.easy-pie-chart/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/jqvmap/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/jszip/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/morris.js/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/select2/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/starrr/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/switchery/package.json" />
+      <path value="$PROJECT_DIR$/admin/assets/vendors/transitionize/package.json" />
       <path value="$PROJECT_DIR$/gentelella-master/package.json" />
       <path value="$PROJECT_DIR$/gentelella-master/vendors/Chart.js/package.json" />
       <path value="$PROJECT_DIR$/gentelella-master/vendors/DateJS/package.json" />
@@ -316,6 +269,9 @@
     <option name="width" value="1936" />
     <option name="height" value="1176" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -336,19 +292,6 @@
             <path>
               <item name="import" type="b2602c69:ProjectViewProjectNode" />
               <item name="import" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="import" type="b2602c69:ProjectViewProjectNode" />
-              <item name="import" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="import" type="b2602c69:ProjectViewProjectNode" />
-              <item name="import" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -375,9 +318,9 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../water" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../magento" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
@@ -386,11 +329,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\xampp\htdocs\import\assets\images\sliders" />
       <recent name="G:\xampp\htdocs\import\admin\templates" />
+      <recent name="D:\xampp\htdocs\import\assets\images" />
+      <recent name="D:\xampp\htdocs\import" />
       <recent name="G:\xampp\htdocs\import\admin\lib" />
-      <recent name="G:\xampp\htdocs\import\admin" />
-      <recent name="D:\xampp\htdocs\import\admin\assets\css" />
-      <recent name="D:\xampp\htdocs\import\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\xampp\htdocs\import\admin" />
@@ -448,6 +391,17 @@
       <workItem from="1528261681603" duration="2775000" />
       <workItem from="1528344854165" duration="1191000" />
       <workItem from="1528361127954" duration="8349000" />
+      <workItem from="1528394325215" duration="1009000" />
+      <workItem from="1528600996644" duration="11649000" />
+      <workItem from="1530788024985" duration="84000" />
+      <workItem from="1532498350192" duration="516000" />
+      <workItem from="1532499021070" duration="9969000" />
+      <workItem from="1532628653920" duration="4752000" />
+      <workItem from="1532671502081" duration="10088000" />
+      <workItem from="1532691610776" duration="3192000" />
+      <workItem from="1532930782826" duration="7466000" />
+      <workItem from="1532944251961" duration="4260000" />
+      <workItem from="1533017639526" duration="14282000" />
     </task>
     <task id="LOCAL-00001" summary="major update&#10;">
       <created>1526904348821</created>
@@ -484,40 +438,54 @@
       <option name="project" value="LOCAL" />
       <updated>1527849723573</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="major update">
+      <created>1532685936527</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1532685936527</updated>
+    </task>
+    <task id="LOCAL-00007" summary="major update">
+      <created>1532687482393</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1532687482393</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153763000" />
+    <option name="totallyTimeSpent" value="222491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32906404" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32906404" />
+      <window_info anchor="bottom" id="File Transfer" order="16" weight="0.3277559" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.24433498" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.24114174" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.23560767" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.27980295" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1988273" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" weight="0.3290938" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.15405117" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32906404" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.19349681" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.27755904" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20895523" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" weight="0.3290938" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.1401919" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="MagicentoScripts" order="15" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Full Stack Tools" order="7" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Full Stack Tools" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="File Transfer" order="7" weight="0.32906404" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32906404" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,346 +542,350 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cur/demo/index.html">
+    <entry file="file://$PROJECT_DIR$/admin/lib/Templates.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="310" column="23" lean-forward="true" selection-start-line="310" selection-start-column="23" selection-end-line="310" selection-end-column="23" />
+        <state relative-caret-position="658">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.php" />
-    <entry file="file://$PROJECT_DIR$/includes/header.php">
+    <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-660" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2856">
-          <caret line="168" column="44" selection-start-line="168" selection-start-column="44" selection-end-line="168" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lib/Session.php" />
-    <entry file="file://$PROJECT_DIR$/admin/helpers/system_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="7" selection-start-line="7" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bkindex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="129" column="24" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gentelella-master/production/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-325">
-          <caret line="124" column="18" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gentelella-master/production/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="207" column="21" lean-forward="true" selection-start-line="190" selection-start-column="14" selection-end-line="207" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lib/Brands.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="136" column="5" lean-forward="true" selection-start-line="123" selection-start-column="3" selection-end-line="136" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/add_shipping.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lib/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lib/Shipping.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="74" column="5" lean-forward="true" selection-start-line="61" selection-start-column="4" selection-end-line="74" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/shipping.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="1" lean-forward="true" selection-start-line="14" selection-end-line="28" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/allshipping.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/region.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/allbrands.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/allregion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="45" column="67" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/allrequests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/allcustomers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/allusers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lib/Setting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/setting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lib/Region.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/customers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/edit_brand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1498">
-          <caret line="107" column="112" selection-start-line="107" selection-start-column="112" selection-end-line="107" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/config/systems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3066">
-          <caret line="219" column="10" selection-start-line="219" selection-start-column="10" selection-end-line="450" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/core/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="-848">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="56">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lib/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="167" column="30" selection-start-line="167" selection-start-column="30" selection-end-line="167" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/localshipping.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/brands.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" selection-start-line="15" selection-end-line="28" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/add_brand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="129" column="34" lean-forward="true" selection-start-line="125" selection-start-column="28" selection-end-line="129" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/customdutiestaxes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/lib/CustomDutiesTaxes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="35" column="52" lean-forward="true" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/edit_customdutiestaxes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="71" column="112" selection-start-line="71" selection-start-column="112" selection-end-line="71" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="96" column="35" lean-forward="true" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/add_customdutiestaxes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/allcustomdutiestaxes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="39" column="69" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/custom_duties_taxes">
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/requested_items">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/requested_items">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/requested_items">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/requested_items">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/requested_items">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/request">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/request">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/request">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/requested_items">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/requested_items">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/request">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/request">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/requested_items">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/requested_items">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/request.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/request">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/request">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/request">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/requested_items">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/lib/RequestItems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/lib/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1288">
+          <caret line="92" column="54" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index-main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1610">
+          <caret line="115" column="39" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="134" selection-start-line="18" selection-start-column="134" selection-end-line="18" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/request">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/order_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/core/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/region">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/lib/Region.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/region.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1134" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/lib/Shipping.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="78" column="9" selection-start-line="64" selection-start-column="8" selection-end-line="78" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/allregion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="101" column="33" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/allbrands.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/add_region.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/brands.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="20" selection-start-line="20" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/sliders">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="15" selection-start-line="15" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/add_slide.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/lib/Brands.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="190" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/config/systems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="341" column="114" selection-start-line="341" selection-start-column="114" selection-end-line="341" selection-end-column="114" />
+        <state relative-caret-position="127">
+          <caret line="68" column="78" selection-start-line="68" selection-start-column="70" selection-end-line="68" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2eb31811-5e56-4d1c-924a-a1f64216e6e4/schema/importhub_form_db/table/settings">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2eb31811-5e56-4d1c-924a-a1f64216e6e4/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/frontpage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="111" column="118" selection-start-line="111" selection-start-column="107" selection-end-line="111" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/allsettings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="188" column="40" selection-start-line="188" selection-start-column="40" selection-end-line="188" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/lib/Setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
         </state>
       </provider>
     </entry>

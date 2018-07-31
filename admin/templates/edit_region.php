@@ -60,6 +60,13 @@ include("../includes/header.php");?>
                                 <small>Currency Symbol like Rs., $ etc.</small>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Currency Exchange Rates <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="currency_exchange_rate" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $region->currency_exchange_rate ?>">
+                            </div>
+                        </div>
 
                         <div class="ln_solid"></div>
                         <div class="form-group">

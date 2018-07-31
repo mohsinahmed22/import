@@ -17,7 +17,7 @@ if (isset($_POST['login'])){
     $username = $_POST['username'];
     $password = md5($_POST['password']);
 
-    echo $password;
+    
     $user = new User();
 
     if($user->login($username, $password)){

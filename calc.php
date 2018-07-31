@@ -11,11 +11,12 @@ $taxes = $tax->getAllCustomDutiesTaxes();
 $tax_charge= 0;
 isset($_SESSION['req_item_subtotal']) ? $total_product_amount = array_sum($_SESSION['req_item_subtotal']) : "0.00";
 isset($_SESSION['req_item_shipping_subtotal']) ? $total_shipping_amount = array_sum($_SESSION['req_item_shipping_subtotal']) : "0.00";
+isset($_SESSION['standard_charges']) ? $total_standard_charges_amount = array_sum($_SESSION['standard_charges']) : "0.00";
 
 if(isset($_GET['cdt'])){
     foreach($taxes as $t):
         if($t->name == $_GET['cdt']){
-            $taxCharge = number_format((($total_product_amount + $total_shipping_amount))/ $t->charges,2);
+            $taxCharge = number_format((($t->charges/100)*($total_product_amount + $total_standard_charges_amount + $total_shipping_amount)),2,'.','');
             echo $_GET['name']?>: <strong class="pull-right text-right"><?php echo STORE_DEFAULT_CUR_SYMBOL ?> <?php echo  $taxCharge ?></span></strong>
             <hr>
             <p class="total">Total Bill:
@@ -24,9 +25,8 @@ if(isset($_GET['cdt'])){
                     if(isset($_SESSION['req_item_subtotal'])):
                         $calculate = (array_sum($_SESSION['req_item_subtotal'])
                             + array_sum($_SESSION['req_item_shipping_subtotal'])
-                            + array_sum($_SESSION['standard_charges']))
-                            + $taxCharge;
-                        $total_bill = $calculate ;
+                            + array_sum($_SESSION['standard_charges']));
+                        $total_bill = number_format($calculate, 2,'.','') + $taxCharge;
                         echo $total_bill ;
                     else:
                         echo "0.00";
@@ -46,5 +46,5 @@ if(isset($_GET['cdt'])){
     endforeach;
     ?>
 
-    <button type="submit" name="placeorder" class=" text-center btn btn-import-wide btn-lg btn-danger">Place Order</button>
+    <button type="submit" name="placeorder" class="btn-block text-center btn btn-import-wide btn-lg btn-danger">Place Order</button>
 <?php } ?>

@@ -59,12 +59,13 @@ class Region
      */
     public function register($data){
         $this->db->query("
-                    INSERT INTO region (region_name, region_code, region_cur, region_cur_symbol)
-                     VAlUE (:region_name, :region_code, :region_cur, :region_cur_symbol)");
+                    INSERT INTO region (region_name, region_code, region_cur, region_cur_symbol, currency_exchange_rate)
+                     VAlUE (:region_name, :region_code, :region_cur, :region_cur_symbol, :currency_exchange_rate)");
         $this->db->bind(':region_name', $data['region_name']);
         $this->db->bind(':region_code', $data['region_code']);
         $this->db->bind(':region_cur', $data['region_cur']);
         $this->db->bind(':region_cur_symbol', $data['region_cur_symbol']);
+        $this->db->bind(':currency_exchange_rate', $data['currency_exchange_rate']);
         if($this->db->execute()){
             return true;
         }else{
@@ -85,13 +86,15 @@ class Region
                     region_code = :region_code,
                     region_name = :region_name,
                     region_cur = :region_cur,
-                    region_cur_symbol = :region_cur_symbol 
+                    region_cur_symbol = :region_cur_symbol,
+                    currency_exchange_rate = :currency_exchange_rate 
                     where id = :id ");
         $this->db->bind(':id', $data['id']);
         $this->db->bind(':region_name', $data['region_name']);
         $this->db->bind(':region_code', $data['region_code']);
         $this->db->bind(':region_cur', $data['region_cur']);
         $this->db->bind(':region_cur_symbol', $data['region_cur_symbol']);
+        $this->db->bind(':currency_exchange_rate', $data['currency_exchange_rate']);
         if($this->db->execute()){
             return true;
         }else{

@@ -36,6 +36,11 @@ if(isset($_GET['brands'])){
     $template = new Templates("templates/add_region.php");
     $template->title = "Add New Region";
 
+}elseif(isset($_GET['slide'])){
+
+    $template = new Templates("templates/add_slide.php");
+    $template->title = "Add New Slide";
+
 }
 
 if (isset($_POST['add_region'])){
@@ -47,6 +52,7 @@ if (isset($_POST['add_region'])){
     $data['region_code'] = $_POST['region_code'];
     $data['region_cur'] = $_POST['region_cur'];
     $data['region_cur_symbol'] = $_POST['region_cur_symbol'];
+    $data['currency_exchange_rate'] = $_POST['currency_exchange_rate'];
 
     if($new_region->register($data)){
         header('Location: region.php?msg='.urlencode('Region Successfully Added'));
@@ -78,6 +84,24 @@ if (isset($_POST['add_brand'])){
         exit();
     }
 
+}
+
+if (isset($_POST['add_slide'])){
+    $new_settings = new Setting();
+
+    $data = array();
+    $data['img_title'] = $_POST['img_title'];
+    //Upload Logo Image
+    if($new_settings->uploadslide()){
+        $data['img_path'] = $_FILES["img_path"]["name"];
+    }else{
+        $data['img_path'] = 'noimage.png';
+    }
+
+    if($new_settings->registerSlide($data)){
+        header('Location: setting.php?msg='.urlencode('Slide Successfully Added'));
+
+    }
 }
 
 if(isset($_POST['add_shipping'])){
